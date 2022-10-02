@@ -8,19 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+  
+  @State var offset: CGSize = .zero
+  
+  var body: some View {
+    RoundedRectangle(cornerRadius: 20)
+      .frame(width: 100, height: 100)
+      .gesture(
+        DragGesture()
+          .onChanged({ value in
+            
+          })
+          .onEnded({ value in
+            
+          })
+      )
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

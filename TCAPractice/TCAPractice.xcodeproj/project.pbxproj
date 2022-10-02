@@ -7,99 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8671465228DC3EB1000B585A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671465128DC3EB1000B585A /* AppDelegate.swift */; };
-		8671465428DC3EB1000B585A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671465328DC3EB1000B585A /* SceneDelegate.swift */; };
-		8671465628DC3EB1000B585A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671465528DC3EB1000B585A /* ViewController.swift */; };
-		8671465B28DC3EB2000B585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8671465A28DC3EB2000B585A /* Assets.xcassets */; };
-		8671465E28DC3EB2000B585A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8671465C28DC3EB2000B585A /* LaunchScreen.storyboard */; };
+		8671469A28E04280000B585A /* TCAPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671469928E04280000B585A /* TCAPracticeApp.swift */; };
+		8671469C28E04280000B585A /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671469B28E04280000B585A /* CounterView.swift */; };
+		8671469E28E04281000B585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8671469D28E04281000B585A /* Assets.xcassets */; };
+		867146A128E04281000B585A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867146A028E04281000B585A /* Preview Assets.xcassets */; };
+		867146A928E04304000B585A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 867146A828E04304000B585A /* ComposableArchitecture */; };
+		867146AB28E132F3000B585A /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AA28E132F3000B585A /* MemoModel.swift */; };
+		867146AD28E13490000B585A /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AC28E13490000B585A /* MemoClient.swift */; };
+		867146AF28E13CED000B585A /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AE28E13CED000B585A /* MemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8671464E28DC3EB1000B585A /* q2e.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = q2e.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8671465128DC3EB1000B585A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8671465328DC3EB1000B585A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8671465528DC3EB1000B585A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8671465A28DC3EB2000B585A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8671465D28DC3EB2000B585A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8671465F28DC3EB2000B585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8671469628E04280000B585A /* TCAPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCAPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8671469928E04280000B585A /* TCAPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPracticeApp.swift; sourceTree = "<group>"; };
+		8671469B28E04280000B585A /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		8671469D28E04281000B585A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		867146A028E04281000B585A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		867146AA28E132F3000B585A /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		867146AC28E13490000B585A /* MemoClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoClient.swift; sourceTree = "<group>"; };
+		867146AE28E13CED000B585A /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		867146B028E1F068000B585A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8671464B28DC3EB1000B585A /* Frameworks */ = {
+		8671469328E04280000B585A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				867146A928E04304000B585A /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8671464528DC3EB1000B585A = {
+		8671468D28E04280000B585A = {
 			isa = PBXGroup;
 			children = (
-				8671465028DC3EB1000B585A /* q2e */,
-				8671464F28DC3EB1000B585A /* Products */,
+				8671469828E04280000B585A /* TCAPractice */,
+				8671469728E04280000B585A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		8671464F28DC3EB1000B585A /* Products */ = {
+		8671469728E04280000B585A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8671464E28DC3EB1000B585A /* q2e.app */,
+				8671469628E04280000B585A /* TCAPractice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8671465028DC3EB1000B585A /* q2e */ = {
+		8671469828E04280000B585A /* TCAPractice */ = {
 			isa = PBXGroup;
 			children = (
-				8671465128DC3EB1000B585A /* AppDelegate.swift */,
-				8671465328DC3EB1000B585A /* SceneDelegate.swift */,
-				8671465528DC3EB1000B585A /* ViewController.swift */,
-				8671465A28DC3EB2000B585A /* Assets.xcassets */,
-				8671465C28DC3EB2000B585A /* LaunchScreen.storyboard */,
-				8671465F28DC3EB2000B585A /* Info.plist */,
+				867146B028E1F068000B585A /* Info.plist */,
+				8671469928E04280000B585A /* TCAPracticeApp.swift */,
+				867146AA28E132F3000B585A /* MemoModel.swift */,
+				867146AE28E13CED000B585A /* MemoView.swift */,
+				867146AC28E13490000B585A /* MemoClient.swift */,
+				8671469B28E04280000B585A /* CounterView.swift */,
+				8671469D28E04281000B585A /* Assets.xcassets */,
+				8671469F28E04281000B585A /* Preview Content */,
 			);
-			path = q2e;
+			path = TCAPractice;
+			sourceTree = "<group>";
+		};
+		8671469F28E04281000B585A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				867146A028E04281000B585A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8671464D28DC3EB1000B585A /* q2e */ = {
+		8671469528E04280000B585A /* TCAPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8671466228DC3EB2000B585A /* Build configuration list for PBXNativeTarget "q2e" */;
+			buildConfigurationList = 867146A428E04281000B585A /* Build configuration list for PBXNativeTarget "TCAPractice" */;
 			buildPhases = (
-				8671464A28DC3EB1000B585A /* Sources */,
-				8671464B28DC3EB1000B585A /* Frameworks */,
-				8671464C28DC3EB1000B585A /* Resources */,
+				8671469228E04280000B585A /* Sources */,
+				8671469328E04280000B585A /* Frameworks */,
+				8671469428E04280000B585A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = q2e;
-			productName = q2e;
-			productReference = 8671464E28DC3EB1000B585A /* q2e.app */;
+			name = TCAPractice;
+			packageProductDependencies = (
+				867146A828E04304000B585A /* ComposableArchitecture */,
+			);
+			productName = TCAPractice;
+			productReference = 8671469628E04280000B585A /* TCAPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		8671464628DC3EB1000B585A /* Project object */ = {
+		8671468E28E04280000B585A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					8671464D28DC3EB1000B585A = {
+					8671469528E04280000B585A = {
 						CreatedOnToolsVersion = 14.0;
 					};
 				};
 			};
-			buildConfigurationList = 8671464928DC3EB1000B585A /* Build configuration list for PBXProject "q2e" */;
+			buildConfigurationList = 8671469128E04280000B585A /* Build configuration list for PBXProject "TCAPractice" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +126,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 8671464528DC3EB1000B585A;
-			productRefGroup = 8671464F28DC3EB1000B585A /* Products */;
+			mainGroup = 8671468D28E04280000B585A;
+			packageReferences = (
+				867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = 8671469728E04280000B585A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8671464D28DC3EB1000B585A /* q2e */,
+				8671469528E04280000B585A /* TCAPractice */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8671464C28DC3EB1000B585A /* Resources */ = {
+		8671469428E04280000B585A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8671465E28DC3EB2000B585A /* LaunchScreen.storyboard in Resources */,
-				8671465B28DC3EB2000B585A /* Assets.xcassets in Resources */,
+				867146A128E04281000B585A /* Preview Assets.xcassets in Resources */,
+				8671469E28E04281000B585A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8671464A28DC3EB1000B585A /* Sources */ = {
+		8671469228E04280000B585A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8671465628DC3EB1000B585A /* ViewController.swift in Sources */,
-				8671465228DC3EB1000B585A /* AppDelegate.swift in Sources */,
-				8671465428DC3EB1000B585A /* SceneDelegate.swift in Sources */,
+				867146AF28E13CED000B585A /* MemoView.swift in Sources */,
+				867146AD28E13490000B585A /* MemoClient.swift in Sources */,
+				8671469C28E04280000B585A /* CounterView.swift in Sources */,
+				8671469A28E04280000B585A /* TCAPracticeApp.swift in Sources */,
+				867146AB28E132F3000B585A /* MemoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8671465C28DC3EB2000B585A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8671465D28DC3EB2000B585A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		8671466028DC3EB2000B585A /* Debug */ = {
+		867146A228E04281000B585A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -214,7 +227,7 @@
 			};
 			name = Debug;
 		};
-		8671466128DC3EB2000B585A /* Release */ = {
+		867146A328E04281000B585A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -268,19 +281,21 @@
 			};
 			name = Release;
 		};
-		8671466328DC3EB2000B585A /* Debug */ = {
+		867146A528E04281000B585A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TCAPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = q2e/Info.plist;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -288,7 +303,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joohan.q2e;
+				PRODUCT_BUNDLE_IDENTIFIER = joohan.TCAPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,19 +311,21 @@
 			};
 			name = Debug;
 		};
-		8671466428DC3EB2000B585A /* Release */ = {
+		867146A628E04281000B585A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TCAPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
+				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = q2e/Info.plist;
+				INFOPLIST_FILE = TCAPractice/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -316,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joohan.q2e;
+				PRODUCT_BUNDLE_IDENTIFIER = joohan.TCAPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -327,25 +344,44 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8671464928DC3EB1000B585A /* Build configuration list for PBXProject "q2e" */ = {
+		8671469128E04280000B585A /* Build configuration list for PBXProject "TCAPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8671466028DC3EB2000B585A /* Debug */,
-				8671466128DC3EB2000B585A /* Release */,
+				867146A228E04281000B585A /* Debug */,
+				867146A328E04281000B585A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8671466228DC3EB2000B585A /* Build configuration list for PBXNativeTarget "q2e" */ = {
+		867146A428E04281000B585A /* Build configuration list for PBXNativeTarget "TCAPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8671466328DC3EB2000B585A /* Debug */,
-				8671466428DC3EB2000B585A /* Release */,
+				867146A528E04281000B585A /* Debug */,
+				867146A628E04281000B585A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		867146A828E04304000B585A /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 8671464628DC3EB1000B585A /* Project object */;
+	rootObject = 8671468E28E04280000B585A /* Project object */;
 }
