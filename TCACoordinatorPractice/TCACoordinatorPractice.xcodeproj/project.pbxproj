@@ -8,17 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		86BE52AE28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52AD28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift */; };
-		86BE52B028E9E4C800FE29FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52AF28E9E4C800FE29FF /* ContentView.swift */; };
+		86BE52B028E9E4C800FE29FF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52AF28E9E4C800FE29FF /* HomeView.swift */; };
 		86BE52B228E9E4C900FE29FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BE52B128E9E4C900FE29FF /* Assets.xcassets */; };
 		86BE52B528E9E4C900FE29FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86BE52B428E9E4C900FE29FF /* Preview Assets.xcassets */; };
+		86BE52C128E9E56900FE29FF /* HomeCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52C028E9E56900FE29FF /* HomeCore.swift */; };
+		86BE52C328E9E57700FE29FF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52C228E9E57700FE29FF /* DetailView.swift */; };
+		86BE52C528E9E58B00FE29FF /* DetailCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52C428E9E58B00FE29FF /* DetailCore.swift */; };
+		86BE52C728E9E59E00FE29FF /* ScreenCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52C628E9E59E00FE29FF /* ScreenCore.swift */; };
+		86BE52C928E9E5B100FE29FF /* CoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52C828E9E5B100FE29FF /* CoordinatorView.swift */; };
+		86BE52CB28E9E5C600FE29FF /* CoordinatorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86BE52CA28E9E5C600FE29FF /* CoordinatorCore.swift */; };
+		86BE52CE28E9E5E000FE29FF /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 86BE52CD28E9E5E000FE29FF /* TCACoordinators */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		86BE52AA28E9E4C800FE29FF /* TCACoordinatorPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCACoordinatorPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86BE52AD28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCACoordinatorPracticeApp.swift; sourceTree = "<group>"; };
-		86BE52AF28E9E4C800FE29FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		86BE52AF28E9E4C800FE29FF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		86BE52B128E9E4C900FE29FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86BE52B428E9E4C900FE29FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		86BE52C028E9E56900FE29FF /* HomeCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCore.swift; sourceTree = "<group>"; };
+		86BE52C228E9E57700FE29FF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		86BE52C428E9E58B00FE29FF /* DetailCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCore.swift; sourceTree = "<group>"; };
+		86BE52C628E9E59E00FE29FF /* ScreenCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenCore.swift; sourceTree = "<group>"; };
+		86BE52C828E9E5B100FE29FF /* CoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorView.swift; sourceTree = "<group>"; };
+		86BE52CA28E9E5C600FE29FF /* CoordinatorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86BE52CE28E9E5E000FE29FF /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +65,11 @@
 		86BE52AC28E9E4C800FE29FF /* TCACoordinatorPractice */ = {
 			isa = PBXGroup;
 			children = (
-				86BE52AD28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift */,
-				86BE52AF28E9E4C800FE29FF /* ContentView.swift */,
+				86BE52BC28E9E50200FE29FF /* App */,
+				86BE52BF28E9E51500FE29FF /* Home */,
+				86BE52BE28E9E51100FE29FF /* Detail */,
+				86BE52BD28E9E50F00FE29FF /* Screen */,
+				86BE52BB28E9E50100FE29FF /* Coordinator */,
 				86BE52B128E9E4C900FE29FF /* Assets.xcassets */,
 				86BE52B328E9E4C900FE29FF /* Preview Content */,
 			);
@@ -65,6 +82,50 @@
 				86BE52B428E9E4C900FE29FF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		86BE52BB28E9E50100FE29FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				86BE52C828E9E5B100FE29FF /* CoordinatorView.swift */,
+				86BE52CA28E9E5C600FE29FF /* CoordinatorCore.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		86BE52BC28E9E50200FE29FF /* App */ = {
+			isa = PBXGroup;
+			children = (
+				86BE52AD28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift */,
+			);
+			name = App;
+			path = "New Group/App";
+			sourceTree = "<group>";
+		};
+		86BE52BD28E9E50F00FE29FF /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				86BE52C628E9E59E00FE29FF /* ScreenCore.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		86BE52BE28E9E51100FE29FF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				86BE52C228E9E57700FE29FF /* DetailView.swift */,
+				86BE52C428E9E58B00FE29FF /* DetailCore.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		86BE52BF28E9E51500FE29FF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				86BE52AF28E9E4C800FE29FF /* HomeView.swift */,
+				86BE52C028E9E56900FE29FF /* HomeCore.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +144,9 @@
 			dependencies = (
 			);
 			name = TCACoordinatorPractice;
+			packageProductDependencies = (
+				86BE52CD28E9E5E000FE29FF /* TCACoordinators */,
+			);
 			productName = TCACoordinatorPractice;
 			productReference = 86BE52AA28E9E4C800FE29FF /* TCACoordinatorPractice.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 86BE52A128E9E4C800FE29FF;
+			packageReferences = (
+				86BE52CC28E9E5E000FE29FF /* XCRemoteSwiftPackageReference "TCACoordinators" */,
+			);
 			productRefGroup = 86BE52AB28E9E4C800FE29FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86BE52B028E9E4C800FE29FF /* ContentView.swift in Sources */,
+				86BE52C728E9E59E00FE29FF /* ScreenCore.swift in Sources */,
+				86BE52C928E9E5B100FE29FF /* CoordinatorView.swift in Sources */,
+				86BE52B028E9E4C800FE29FF /* HomeView.swift in Sources */,
+				86BE52C328E9E57700FE29FF /* DetailView.swift in Sources */,
+				86BE52C128E9E56900FE29FF /* HomeCore.swift in Sources */,
+				86BE52CB28E9E5C600FE29FF /* CoordinatorCore.swift in Sources */,
 				86BE52AE28E9E4C800FE29FF /* TCACoordinatorPracticeApp.swift in Sources */,
+				86BE52C528E9E58B00FE29FF /* DetailCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +412,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86BE52CC28E9E5E000FE29FF /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86BE52CD28E9E5E000FE29FF /* TCACoordinators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86BE52CC28E9E5E000FE29FF /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86BE52A228E9E4C800FE29FF /* Project object */;
 }
