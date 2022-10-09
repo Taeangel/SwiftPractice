@@ -23,9 +23,11 @@ struct PostsModel: Codable, Identifiable {
 
 class ProductionDataService {
   
-  static let instance = ProductionDataService()
+  let url: URL
   
-  let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+  init(url: URL) {
+    self.url = url
+  }
   
   func getData() -> AnyPublisher<[PostsModel], Error> {
     return URLSession.shared.dataTaskPublisher(for: url)
@@ -78,7 +80,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+  
+  static let dataService: ProductionDataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
   static var previews: some View {
-    ContentView(dataService: ProductionDataService())
+    ContentView(dataService: dataService)
   }
 }

@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct DependencyInjectionApp: App {
     var body: some Scene {
+      let dataService: ProductionDataService = ProductionDataService(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!
+)
         WindowGroup {
-            ContentView(dataService: ProductionDataService())
+            ContentView(dataService: dataService)
         }
     }
 }
