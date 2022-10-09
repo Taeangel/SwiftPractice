@@ -40,13 +40,15 @@ class DependencyInjectionViewModel: ObservableObject {
   
   @Published var dataArray: [PostsModel] = []
   var cancellables = Set<AnyCancellable>()
+  let dataService: ProductionDataService
   
-  init() {
+  init(dataService: ProductionDataService) {
+    self.dataService = dataService
     self.loadPosts()
   }
   
   private func loadPosts() {
-        ProductionDataService.instance.getData()
+    dataService.getData()
       .sink(receiveCompletion: { _ in
       }, receiveValue: { [weak self] returnedPost in
         self?.dataArray = returnedPost
@@ -57,7 +59,11 @@ class DependencyInjectionViewModel: ObservableObject {
 
 struct ContentView: View {
   
-  @StateObject private var vm = DependencyInjectionViewModel()
+  @StateObject private var vm: DependencyInjectionViewModel
+  
+  init(dataService: ProductionDataService) {
+    self._vm = StateObject(wrappedValue: DependencyInjectionViewModel(dataService: dataService))
+  }
   
   var body: some View {
     Text("asdasd")
@@ -73,6 +79,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    ContentView(dataService: ProductionDataService())
   }
 }
