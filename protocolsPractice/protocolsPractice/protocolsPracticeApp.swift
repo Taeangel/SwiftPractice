@@ -11,7 +11,7 @@ import SwiftUI
 struct protocolsPracticeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ProtocolsBootcamp(colorTheme: AlternativeColorTheme(), dataSource: DefaultDataSource())
         }
     }
 }

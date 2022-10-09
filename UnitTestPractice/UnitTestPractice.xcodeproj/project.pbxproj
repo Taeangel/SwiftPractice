@@ -7,22 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86828BEF28EF80BF0000266F /* protocolsPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86828BEE28EF80BF0000266F /* protocolsPracticeApp.swift */; };
-		86828BF128EF80BF0000266F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86828BF028EF80BF0000266F /* ContentView.swift */; };
-		86828BF328EF80BF0000266F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86828BF228EF80BF0000266F /* Assets.xcassets */; };
-		86828BF628EF80BF0000266F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86828BF528EF80BF0000266F /* Preview Assets.xcassets */; };
+		868C540928F314C6006A9B38 /* UnitTestPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C540828F314C6006A9B38 /* UnitTestPracticeApp.swift */; };
+		868C540B28F314C6006A9B38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868C540A28F314C6006A9B38 /* ContentView.swift */; };
+		868C540D28F314C7006A9B38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C540C28F314C7006A9B38 /* Assets.xcassets */; };
+		868C541028F314C7006A9B38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 868C540F28F314C7006A9B38 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		86828BEB28EF80BF0000266F /* protocolsPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = protocolsPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		86828BEE28EF80BF0000266F /* protocolsPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocolsPracticeApp.swift; sourceTree = "<group>"; };
-		86828BF028EF80BF0000266F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		86828BF228EF80BF0000266F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86828BF528EF80BF0000266F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		868C540528F314C6006A9B38 /* UnitTestPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		868C540828F314C6006A9B38 /* UnitTestPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestPracticeApp.swift; sourceTree = "<group>"; };
+		868C540A28F314C6006A9B38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		868C540C28F314C7006A9B38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		868C540F28F314C7006A9B38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		86828BE828EF80BF0000266F /* Frameworks */ = {
+		868C540228F314C6006A9B38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +32,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86828BE228EF80BF0000266F = {
+		868C53FC28F314C6006A9B38 = {
 			isa = PBXGroup;
 			children = (
-				86828BED28EF80BF0000266F /* protocolsPractice */,
-				86828BEC28EF80BF0000266F /* Products */,
+				868C540728F314C6006A9B38 /* UnitTestPractice */,
+				868C540628F314C6006A9B38 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		86828BEC28EF80BF0000266F /* Products */ = {
+		868C540628F314C6006A9B38 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86828BEB28EF80BF0000266F /* protocolsPractice.app */,
+				868C540528F314C6006A9B38 /* UnitTestPractice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		86828BED28EF80BF0000266F /* protocolsPractice */ = {
+		868C540728F314C6006A9B38 /* UnitTestPractice */ = {
 			isa = PBXGroup;
 			children = (
-				86828BEE28EF80BF0000266F /* protocolsPracticeApp.swift */,
-				86828BF028EF80BF0000266F /* ContentView.swift */,
-				86828BF228EF80BF0000266F /* Assets.xcassets */,
-				86828BF428EF80BF0000266F /* Preview Content */,
+				868C540828F314C6006A9B38 /* UnitTestPracticeApp.swift */,
+				868C540A28F314C6006A9B38 /* ContentView.swift */,
+				868C540C28F314C7006A9B38 /* Assets.xcassets */,
+				868C540E28F314C7006A9B38 /* Preview Content */,
 			);
-			path = protocolsPractice;
+			path = UnitTestPractice;
 			sourceTree = "<group>";
 		};
-		86828BF428EF80BF0000266F /* Preview Content */ = {
+		868C540E28F314C7006A9B38 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				86828BF528EF80BF0000266F /* Preview Assets.xcassets */,
+				868C540F28F314C7006A9B38 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +70,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		86828BEA28EF80BF0000266F /* protocolsPractice */ = {
+		868C540428F314C6006A9B38 /* UnitTestPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86828BF928EF80BF0000266F /* Build configuration list for PBXNativeTarget "protocolsPractice" */;
+			buildConfigurationList = 868C541328F314C7006A9B38 /* Build configuration list for PBXNativeTarget "UnitTestPractice" */;
 			buildPhases = (
-				86828BE728EF80BF0000266F /* Sources */,
-				86828BE828EF80BF0000266F /* Frameworks */,
-				86828BE928EF80BF0000266F /* Resources */,
+				868C540128F314C6006A9B38 /* Sources */,
+				868C540228F314C6006A9B38 /* Frameworks */,
+				868C540328F314C6006A9B38 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = protocolsPractice;
-			productName = protocolsPractice;
-			productReference = 86828BEB28EF80BF0000266F /* protocolsPractice.app */;
+			name = UnitTestPractice;
+			productName = UnitTestPractice;
+			productReference = 868C540528F314C6006A9B38 /* UnitTestPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		86828BE328EF80BF0000266F /* Project object */ = {
+		868C53FD28F314C6006A9B38 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
-					86828BEA28EF80BF0000266F = {
+					868C540428F314C6006A9B38 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 86828BE628EF80BF0000266F /* Build configuration list for PBXProject "protocolsPractice" */;
+			buildConfigurationList = 868C540028F314C6006A9B38 /* Build configuration list for PBXProject "UnitTestPractice" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 86828BE228EF80BF0000266F;
-			productRefGroup = 86828BEC28EF80BF0000266F /* Products */;
+			mainGroup = 868C53FC28F314C6006A9B38;
+			productRefGroup = 868C540628F314C6006A9B38 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86828BEA28EF80BF0000266F /* protocolsPractice */,
+				868C540428F314C6006A9B38 /* UnitTestPractice */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86828BE928EF80BF0000266F /* Resources */ = {
+		868C540328F314C6006A9B38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86828BF628EF80BF0000266F /* Preview Assets.xcassets in Resources */,
-				86828BF328EF80BF0000266F /* Assets.xcassets in Resources */,
+				868C541028F314C7006A9B38 /* Preview Assets.xcassets in Resources */,
+				868C540D28F314C7006A9B38 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86828BE728EF80BF0000266F /* Sources */ = {
+		868C540128F314C6006A9B38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86828BF128EF80BF0000266F /* ContentView.swift in Sources */,
-				86828BEF28EF80BF0000266F /* protocolsPracticeApp.swift in Sources */,
+				868C540B28F314C6006A9B38 /* ContentView.swift in Sources */,
+				868C540928F314C6006A9B38 /* UnitTestPracticeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		86828BF728EF80BF0000266F /* Debug */ = {
+		868C541128F314C7006A9B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +205,7 @@
 			};
 			name = Debug;
 		};
-		86828BF828EF80BF0000266F /* Release */ = {
+		868C541228F314C7006A9B38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,14 +259,14 @@
 			};
 			name = Release;
 		};
-		86828BFA28EF80BF0000266F /* Debug */ = {
+		868C541428F314C7006A9B38 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"protocolsPractice/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UnitTestPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +280,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joohan.protocolsPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = joohan.UnitTestPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -288,14 +288,14 @@
 			};
 			name = Debug;
 		};
-		86828BFB28EF80BF0000266F /* Release */ = {
+		868C541528F314C7006A9B38 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"protocolsPractice/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UnitTestPractice/Preview Content\"";
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -309,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = joohan.protocolsPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = joohan.UnitTestPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,25 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		86828BE628EF80BF0000266F /* Build configuration list for PBXProject "protocolsPractice" */ = {
+		868C540028F314C6006A9B38 /* Build configuration list for PBXProject "UnitTestPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86828BF728EF80BF0000266F /* Debug */,
-				86828BF828EF80BF0000266F /* Release */,
+				868C541128F314C7006A9B38 /* Debug */,
+				868C541228F314C7006A9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86828BF928EF80BF0000266F /* Build configuration list for PBXNativeTarget "protocolsPractice" */ = {
+		868C541328F314C7006A9B38 /* Build configuration list for PBXNativeTarget "UnitTestPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86828BFA28EF80BF0000266F /* Debug */,
-				86828BFB28EF80BF0000266F /* Release */,
+				868C541428F314C7006A9B38 /* Debug */,
+				868C541528F314C7006A9B38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 86828BE328EF80BF0000266F /* Project object */;
+	rootObject = 868C53FD28F314C6006A9B38 /* Project object */;
 }

@@ -25,18 +25,30 @@ struct AnothercolerTheme: ColorThemeProtocol {
   var tertiary: Color = .primary
 }
 
-protocol ButtonTextProtocol {
-  var buttonText: String { get }
+protocol ButtonPressedProtocol {
+  func buttonPressed()
+
 }
 
-class DefaultDataSource {
+protocol ButtonTextProtocol {
+  var buttonText: String { get }
+  
+}
+
+protocol ButtonDataSourceProtocol: ButtonTextProtocol, ButtonPressedProtocol { }
+
+class DefaultDataSource: ButtonDataSourceProtocol {
+  
+  func buttonPressed() {
+    print("버튼눌림")
+  }
+  
   var buttonText: String = "Protocols are awsome!"
 }
 
 class AlternativeDataSource {
   var buttonText: String = "Protocols are lame."
 }
-
 
 protocol ColorThemeProtocol {
   var primary: Color { get }
@@ -46,8 +58,10 @@ protocol ColorThemeProtocol {
 
 
 struct ProtocolsBootcamp: View {
-//  let colorTheme: DefaultColorTheme = DefaultColorTheme()
-  let colorTheme: ColorThemeProtocol = AlternativeColorTheme()
+  
+  let colorTheme: ColorThemeProtocol
+  let dataSource: ButtonDataSourceProtocol
+  
   var body: some View {
     ZStack {
       colorTheme.tertiary
@@ -58,25 +72,15 @@ struct ProtocolsBootcamp: View {
         .padding(.all)
         .background(colorTheme.primary)
         .cornerRadius(10)
-      
+        .onTapGesture {
+          dataSource.buttonPressed()
+        }
     }
   }
 }
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-      ProtocolsBootcamp()
+      ProtocolsBootcamp(colorTheme: AlternativeColorTheme(), dataSource: DefaultDataSource())
     }
 }
