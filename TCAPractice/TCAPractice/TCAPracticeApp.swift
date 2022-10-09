@@ -20,7 +20,7 @@ struct TCAPracticeApp: App {
   
   var body: some Scene {
     WindowGroup {
-      //      CounterView(store: counterStore)
+//           CounterView(store: counterStore)
       MemoView(store: memoStore)
     }
   }

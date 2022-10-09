@@ -21,8 +21,6 @@ struct MemoClient {
 extension MemoClient {
   // 메모클라이언트 자체를 반환
   static let live = MemoClient(
-    
-    
     fetchMemoItem: { id in
     Effect.task {
       let (data, _) = try await URLSession.shared

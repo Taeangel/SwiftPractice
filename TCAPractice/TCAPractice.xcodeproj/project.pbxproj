@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865BE52C28ED4F1000305899 /* TCACoordinators in Frameworks */ = {isa = PBXBuildFile; productRef = 865BE52B28ED4F1000305899 /* TCACoordinators */; };
 		8671469A28E04280000B585A /* TCAPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671469928E04280000B585A /* TCAPracticeApp.swift */; };
 		8671469C28E04280000B585A /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671469B28E04280000B585A /* CounterView.swift */; };
 		8671469E28E04281000B585A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8671469D28E04281000B585A /* Assets.xcassets */; };
 		867146A128E04281000B585A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 867146A028E04281000B585A /* Preview Assets.xcassets */; };
-		867146A928E04304000B585A /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 867146A828E04304000B585A /* ComposableArchitecture */; };
 		867146AB28E132F3000B585A /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AA28E132F3000B585A /* MemoModel.swift */; };
 		867146AD28E13490000B585A /* MemoClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AC28E13490000B585A /* MemoClient.swift */; };
 		867146AF28E13CED000B585A /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867146AE28E13CED000B585A /* MemoView.swift */; };
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867146A928E04304000B585A /* ComposableArchitecture in Frameworks */,
+				865BE52C28ED4F1000305899 /* TCACoordinators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = TCAPractice;
 			packageProductDependencies = (
-				867146A828E04304000B585A /* ComposableArchitecture */,
+				865BE52B28ED4F1000305899 /* TCACoordinators */,
 			);
 			productName = TCAPractice;
 			productReference = 8671469628E04280000B585A /* TCAPractice.app */;
@@ -128,7 +128,7 @@
 			);
 			mainGroup = 8671468D28E04280000B585A;
 			packageReferences = (
-				867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				865BE52A28ED4F1000305899 /* XCRemoteSwiftPackageReference "TCACoordinators" */,
 			);
 			productRefGroup = 8671469728E04280000B585A /* Products */;
 			projectDirPath = "";
@@ -365,21 +365,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+		865BE52A28ED4F1000305899 /* XCRemoteSwiftPackageReference "TCACoordinators" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			repositoryURL = "https://github.com/johnpatrickmorgan/TCACoordinators";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.0;
+				minimumVersion = 0.2.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		867146A828E04304000B585A /* ComposableArchitecture */ = {
+		865BE52B28ED4F1000305899 /* TCACoordinators */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 867146A728E04304000B585A /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
-			productName = ComposableArchitecture;
+			package = 865BE52A28ED4F1000305899 /* XCRemoteSwiftPackageReference "TCACoordinators" */;
+			productName = TCACoordinators;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

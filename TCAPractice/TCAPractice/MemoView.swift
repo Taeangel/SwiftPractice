@@ -34,6 +34,7 @@ struct MemoEnvironment {
 
 let memoReducer = Reducer<MemoState, MemoAction, MemoEnvironment> { state, action, environment in
   switch action {
+    
   case .fetchItem(let memoId):
     enum FetchItemId {}
     state.isLoading = true
@@ -43,6 +44,7 @@ let memoReducer = Reducer<MemoState, MemoAction, MemoEnvironment> { state, actio
                 for: 0.3,
                 scheduler: environment.mainQueue)
       .catchToEffect(MemoAction.fetchItemResponse)
+    
   case .fetchItemResponse(.success(let memo)):
     state.selectedMemo = memo
     state.isLoading = false
@@ -98,8 +100,7 @@ struct MemoView: View {
             Text(viewStore.state.selectedMemo?.email ?? "비어있음")
             Text(viewStore.state.selectedMemo?.password ?? "비어있음")
             
-          }
-                  ,
+          },
                   content: {
             ForEach(viewStore.state.memos) { aMemo in
               Button(aMemo.name, action: {

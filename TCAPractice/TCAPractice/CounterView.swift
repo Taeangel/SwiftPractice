@@ -38,7 +38,7 @@ struct CounterView: View {
   let store: Store<CounterState, CounterAction>
   
   var body: some View {
-    
+    WithViewStore(
     WithViewStore(self.store) { viewStore in
       
       VStack {
