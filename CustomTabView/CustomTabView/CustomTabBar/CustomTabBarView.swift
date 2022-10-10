@@ -11,9 +11,10 @@ struct CustomTabBarView: View {
   
   let tabs: [TabBarItem]
   @Binding var selection: TabBarItem
+  @Namespace private var namespace
   
     var body: some View {
-      tabBarVersion1
+      tabBarVersion2
     }
 }
 
@@ -59,6 +60,7 @@ extension CustomTabBarView {
       }
     }
     .padding(6)
+    .background(Color.white.ignoresSafeArea(edges: .bottom))
   }
   
   private func switchTabBar(tab: TabBarItem) {
@@ -80,7 +82,32 @@ extension CustomTabBarView {
     .foregroundColor(tab.color)
     .padding(.vertical, 8)
     .frame(maxWidth: .infinity)
-    .background(selection == tab ? tab.color.opacity(0.2) : Color.clear)
+    .background(
+      ZStack {
+        if selection == tab {
+          RoundedRectangle(cornerRadius: 10)
+            .fill(tab.color.opacity(0.2))
+            .matchedGeometryEffect(id: "background_rectangle", in: namespace)
+        }
+      }
+    )
     .cornerRadius(10)
+  }
+  
+  private var tabBarVersion2: some View {
+    HStack {
+      Spacer()
+      ForEach(tabs, id: \.self) { tab in
+        tabView2(tab: tab)
+          .onTapGesture {
+            switchTabBar(tab: tab)
+          }
+      }
+    }
+//    .padding(6)
+    .background(Color.white.ignoresSafeArea(edges: .bottom))
+    .cornerRadius(10)
+    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+    
   }
 }
