@@ -27,7 +27,7 @@ struct AnothercolerTheme: ColorThemeProtocol {
 
 protocol ButtonPressedProtocol {
   func buttonPressed()
-
+  
 }
 
 protocol ButtonTextProtocol {
@@ -80,7 +80,7 @@ struct ProtocolsBootcamp: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-      ProtocolsBootcamp(colorTheme: AlternativeColorTheme(), dataSource: DefaultDataSource())
-    }
+  static var previews: some View {
+    ProtocolsBootcamp(colorTheme: AlternativeColorTheme(), dataSource: DefaultDataSource())
+  }
 }
