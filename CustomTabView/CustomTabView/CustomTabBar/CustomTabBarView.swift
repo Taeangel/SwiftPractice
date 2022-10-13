@@ -64,7 +64,7 @@ extension CustomTabBarView {
   }
   
   private func switchTabBar(tab: TabBarItem) {
-    withAnimation {
+    withAnimation(.easeOut) {
       selection = tab
     }
   }
@@ -79,7 +79,6 @@ extension CustomTabBarView {
         .font(.system(size: 10, weight: .semibold, design: .rounded))
     }
     .foregroundColor(selection == tab ? tab.color : Color.gray)
-    .foregroundColor(tab.color)
     .padding(.vertical, 8)
     .frame(maxWidth: .infinity)
     .background(
@@ -96,7 +95,6 @@ extension CustomTabBarView {
   
   private var tabBarVersion2: some View {
     HStack {
-      Spacer()
       ForEach(tabs, id: \.self) { tab in
         tabView2(tab: tab)
           .onTapGesture {
@@ -104,10 +102,10 @@ extension CustomTabBarView {
           }
       }
     }
-//    .padding(6)
+    .padding(6)
     .background(Color.white.ignoresSafeArea(edges: .bottom))
     .cornerRadius(10)
     .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
-    
+    .padding(.horizontal)
   }
 }
