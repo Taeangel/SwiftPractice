@@ -7,17 +7,59 @@
 
 import SwiftUI
 
+struct StringModel {
+  let info: String?
+  
+  func removeInfo() -> StringModel {
+    return StringModel(info: nil)
+  }
+}
+
+struct BoolModel {
+  let info: Bool?
+  
+  func removeInfo() -> BoolModel {
+    return BoolModel(info: nil)
+  }
+}
+
+struct GenericModel<CustomType> {
+  let infof: CustomType?
+  
+  func removeInfo() -> GenericModel {
+    GenericModel(infof: nil)
+  }
+}
+
+struct GenericView<CustomType: View>: View {
+  
+  let content: CustomType
+  let title: String
+  
+  var body: some View {
+    
+    VStack {
+      Text(title)
+      content
+    }
+  }
+  
+  
+}
+
 
 class GenericsViewModel: ObservableObject {
-  @Published var dataArray: [String] = []
-  
-  init() {
-    dataArray = ["one", "two", "three"]
+  @Published var stringModel = StringModel(info: "Hello, world")
+  @Published var boolModel = BoolModel(info: true)
+  @Published var genericStringModel = GenericModel(infof: "Hello Generic")
+  @Published var genericBoolModel = GenericModel(infof: true)
+  func removeData() {
+    stringModel = stringModel.removeInfo()
+    boolModel = boolModel.removeInfo()
+    genericStringModel = genericStringModel.removeInfo()
+    genericBoolModel = genericBoolModel.removeInfo()
   }
   
-  func removeDataFromDataArray() {
-    dataArray.removeAll()
-  }
 }
 
 struct ContentView: View {
@@ -25,13 +67,15 @@ struct ContentView: View {
   @StateObject var vm = GenericsViewModel()
   var body: some View {
     VStack {
-      ForEach(vm.dataArray, id: \.self) {  item in
-        Text(item)
-          .onTapGesture {
-            vm.removeDataFromDataArray()
-          }
-      }
+      GenericView(content: Text("custom content"), title: "new view!")
       
+      Text(vm.stringModel.info ?? "no data" )
+      
+      
+      Text(vm.boolModel.info?.description ?? "no data")
+    }
+    .onTapGesture {
+      vm.removeData()
     }
   }
 }
