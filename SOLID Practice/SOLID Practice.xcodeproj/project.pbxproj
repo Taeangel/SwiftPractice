@@ -15,6 +15,12 @@
 		8647B01629006F1800EE1DA8 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B01529006F1800EE1DA8 /* CommentModel.swift */; };
 		8647B01F290078CB00EE1DA8 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B01E290078CB00EE1DA8 /* CommentViewModel.swift */; };
 		8647B021290079A700EE1DA8 /* CommnetViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B020290079A700EE1DA8 /* CommnetViewService.swift */; };
+		8647B0262900A36600EE1DA8 /* OpenClosePrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B0252900A36600EE1DA8 /* OpenClosePrincipal.swift */; };
+		8647B0282900A39800EE1DA8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B0272900A39800EE1DA8 /* NetworkManager.swift */; };
+		8647B02A2900B62100EE1DA8 /* DataBaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B0292900B62100EE1DA8 /* DataBaseHandler.swift */; };
+		8647B0302900C04000EE1DA8 /* InterfaceSegrefationPrinciple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B02F2900C04000EE1DA8 /* InterfaceSegrefationPrinciple.swift */; };
+		8647B0322900C5EA00EE1DA8 /* DependencyInversonPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B0312900C5EA00EE1DA8 /* DependencyInversonPrincipal.swift */; };
+		8647B0342900D1E400EE1DA8 /* LiskovSubstitutionPrincipal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8647B0332900D1E400EE1DA8 /* LiskovSubstitutionPrincipal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +33,13 @@
 		8647B01529006F1800EE1DA8 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		8647B01E290078CB00EE1DA8 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		8647B020290079A700EE1DA8 /* CommnetViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommnetViewService.swift; sourceTree = "<group>"; };
+		8647B0252900A36600EE1DA8 /* OpenClosePrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClosePrincipal.swift; sourceTree = "<group>"; };
+		8647B0272900A39800EE1DA8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8647B0292900B62100EE1DA8 /* DataBaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseHandler.swift; sourceTree = "<group>"; };
+		8647B02E2900B6E100EE1DA8 /* Comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comments.json; sourceTree = "<group>"; };
+		8647B02F2900C04000EE1DA8 /* InterfaceSegrefationPrinciple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceSegrefationPrinciple.swift; sourceTree = "<group>"; };
+		8647B0312900C5EA00EE1DA8 /* DependencyInversonPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInversonPrincipal.swift; sourceTree = "<group>"; };
+		8647B0332900D1E400EE1DA8 /* LiskovSubstitutionPrincipal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiskovSubstitutionPrincipal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +76,10 @@
 				8647B01529006F1800EE1DA8 /* CommentModel.swift */,
 				8647B00629006E9400EE1DA8 /* CommentView.swift */,
 				8647B01E290078CB00EE1DA8 /* CommentViewModel.swift */,
+				8647B0272900A39800EE1DA8 /* NetworkManager.swift */,
 				8647B020290079A700EE1DA8 /* CommnetViewService.swift */,
+				8647B0292900B62100EE1DA8 /* DataBaseHandler.swift */,
+				8647B02E2900B6E100EE1DA8 /* Comments.json */,
 				8647B0172900784600EE1DA8 /* SOLID */,
 				8647B00829006E9500EE1DA8 /* Assets.xcassets */,
 				8647B00A29006E9500EE1DA8 /* Preview Content */,
@@ -102,6 +118,7 @@
 		8647B0192900785700EE1DA8 /* D */ = {
 			isa = PBXGroup;
 			children = (
+				8647B0312900C5EA00EE1DA8 /* DependencyInversonPrincipal.swift */,
 			);
 			path = D;
 			sourceTree = "<group>";
@@ -109,6 +126,7 @@
 		8647B01A2900785B00EE1DA8 /* I */ = {
 			isa = PBXGroup;
 			children = (
+				8647B02F2900C04000EE1DA8 /* InterfaceSegrefationPrinciple.swift */,
 			);
 			path = I;
 			sourceTree = "<group>";
@@ -116,6 +134,7 @@
 		8647B01C2900786300EE1DA8 /* L */ = {
 			isa = PBXGroup;
 			children = (
+				8647B0332900D1E400EE1DA8 /* LiskovSubstitutionPrincipal.swift */,
 			);
 			path = L;
 			sourceTree = "<group>";
@@ -123,6 +142,7 @@
 		8647B01D2900786A00EE1DA8 /* O */ = {
 			isa = PBXGroup;
 			children = (
+				8647B0252900A36600EE1DA8 /* OpenClosePrincipal.swift */,
 			);
 			path = O;
 			sourceTree = "<group>";
@@ -197,10 +217,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8647B0322900C5EA00EE1DA8 /* DependencyInversonPrincipal.swift in Sources */,
+				8647B0342900D1E400EE1DA8 /* LiskovSubstitutionPrincipal.swift in Sources */,
 				8647B00729006E9400EE1DA8 /* CommentView.swift in Sources */,
 				8647B01629006F1800EE1DA8 /* CommentModel.swift in Sources */,
 				8647B021290079A700EE1DA8 /* CommnetViewService.swift in Sources */,
 				8647B00529006E9400EE1DA8 /* SOLID_PracticeApp.swift in Sources */,
+				8647B0302900C04000EE1DA8 /* InterfaceSegrefationPrinciple.swift in Sources */,
+				8647B0282900A39800EE1DA8 /* NetworkManager.swift in Sources */,
+				8647B02A2900B62100EE1DA8 /* DataBaseHandler.swift in Sources */,
+				8647B0262900A36600EE1DA8 /* OpenClosePrincipal.swift in Sources */,
 				8647B01F290078CB00EE1DA8 /* CommentViewModel.swift in Sources */,
 				8647B01429006EE600EE1DA8 /* SingleResponsibilityPrinsipal.swift in Sources */,
 			);
