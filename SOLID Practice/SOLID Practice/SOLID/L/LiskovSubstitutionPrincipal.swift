@@ -11,7 +11,7 @@
 //  @Published var comments = [CommentModel]()
 //  let serviceHandler: CommentViewServiceDelegate
 //  let dataBaseCommentHandler: CommentViewServiceDelegate
-//  
+//
 //  init(
 //    commentHandler: CommentViewServiceDelegate = CommnetViewService(),
 //    dataBaseCommentHandler: CommentViewServiceDelegate = DatabaseHandler()
@@ -19,7 +19,7 @@
 //    self.serviceHandler = commentHandler
 //    self.dataBaseCommentHandler = dataBaseCommentHandler
 //  }
-//  
+//
 //  func fetchComments() {
 //    if isConnected() {
 //      DispatchQueue.main.async {
@@ -45,11 +45,11 @@
 //      }
 //    }
 //  }
-//  
+//
 //  private func isConnected() -> Bool {
 //    return true
 //  }
-//  
+//
 //  func fetchUsers() {
 //    DispatchQueue.main.async {
 //      self.serviceHandler.getUsers { result in
@@ -70,20 +70,20 @@
 //}
 //
 //class CommnetViewService: CommentViewServiceDelegate {
-//  
+//
 //  func getComments(completion: @escaping(Result<[CommentModel], DemoError>) -> Void) {
 //    guard let url = URL(string: "유알엘쓰는칸입니다") else {
 //      return completion(.failure(.BadURL))
 //    }
-//    
+//
 //    NetworkManager().fetchRequest(type: [CommentModel].self, url: url, completion: completion)
 //  }
-//  
+//
 //  func getUsers(completion: @escaping(Result<UserModel, DemoError>) -> Void) {
 //    guard let url = URL(string: "유알엘쓰는칸입니다") else {
 //      return completion(.failure(.BadURL))
 //    }
-//    
+//
 //    NetworkManager().fetchRequest(type: UserModel.self, url: url, completion: completion)
 //  }
 //}
