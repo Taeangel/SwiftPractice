@@ -24,6 +24,7 @@ struct ContentView: View {
         .offset(x: offset.width)
 //        .scaleEffect(getScaleAmount())
 //        .rotationEffect(Angle(degrees: getRotationAmount()))
+        .
         .gesture(
           DragGesture()
             .onChanged({ value in

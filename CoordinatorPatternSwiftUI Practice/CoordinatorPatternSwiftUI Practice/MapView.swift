@@ -16,10 +16,6 @@ struct MapView: View {
       Button("Go to the city") {
         coordinator.show(.city(named: "El Paso"))
       }
-      
-      Button("팝업") {
-        coordinator.
-      }
     }
   }
 }

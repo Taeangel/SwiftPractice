@@ -25,8 +25,6 @@ class OnboardingCoordinator: Coordinator {
       self?.hasSeenOnboarding.send(true)
       
     } 
-    
-    
     rootViewController = UIHostingController(rootView: view)
   }
 }
