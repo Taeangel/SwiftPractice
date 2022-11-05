@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
   @State var txt = ""
-  @State var show = false
     
   var body: some View {
     ZStack(alignment: .bottom) {
@@ -21,7 +20,7 @@ struct ContentView: View {
           }
           .padding(12)
           .background(Color.white)
-          .clipShape(Capsule() )
+          .clipShape(Capsule())
           
           EmojiView(txt: $txt)
         }
@@ -81,4 +80,21 @@ struct EmojiView: View {
     }
     return emoji
   }
+  
+  func getEmojiLis() -> [[Int]] {
+    var emoji: [[Int]] = []
+    
+    for i in stride(from: 0x1F34E, to: 0x1F53D, by: 4)  {
+      var temp: [Int] = []
+      
+      for j in i...i+6 {
+        temp.append(j)
+        
+      }
+      emoji.append(temp)
+    }
+    return emoji
+  }
+  
+  
 }

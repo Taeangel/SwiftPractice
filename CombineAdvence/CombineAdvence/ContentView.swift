@@ -46,12 +46,10 @@ class AdvancedCombineViewModel: ObservableObject {
           case .failure(let error):
             print("Error: \(error)")
           }
-          
         },
         receiveValue: { [weak self] returnedValue in
           guard let self = self else { return }
           self.data = returnedValue
-          
         })
       .store(in: &cancellables)
   }
