@@ -15,10 +15,18 @@ class RandomUserViewModel: ObservableObject {
   
   @Published var randomUsers = [RandomUser]()
   
+  var refreshActionSubject = PassthroughSubject<(), Never>()
+  
   var baseUrl = "https://randomuser.me/api/?results=100"
   
   init() {
     self.fetchRandomUsers()
+    
+    
+    refreshActionSubject.sink { [weak self]_ in
+      self?.fetchRandomUsers()
+    }
+    .store(in: &subscription)
   }
   
   
