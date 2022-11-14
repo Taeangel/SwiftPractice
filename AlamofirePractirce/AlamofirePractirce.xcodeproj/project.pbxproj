@@ -19,6 +19,7 @@
 		868E02AF291649F40039B52E /* RandomUser+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E02AE291649F40039B52E /* RandomUser+Response.swift */; };
 		868E02B12916597B0039B52E /* RandomUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E02B02916597B0039B52E /* RandomUserViewModel.swift */; };
 		868E02B429167D980039B52E /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 868E02B329167D980039B52E /* Introspect */; };
+		868E02B72916892C0039B52E /* RandomUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868E02B62916892C0039B52E /* RandomUserRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		868E02A8291640850039B52E /* RandomUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserView.swift; sourceTree = "<group>"; };
 		868E02AE291649F40039B52E /* RandomUser+Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RandomUser+Response.swift"; sourceTree = "<group>"; };
 		868E02B02916597B0039B52E /* RandomUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserViewModel.swift; sourceTree = "<group>"; };
+		868E02B62916892C0039B52E /* RandomUserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomUserRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				868E029129162D4C0039B52E /* AlamofirePractirceApp.swift */,
-				868E02AD291649C90039B52E /* NewGroup */,
+				868E02B5291689170039B52E /* API */,
+				868E02AD291649C90039B52E /* Data */,
 				868E029029162D4C0039B52E /* AlamofirePractirce */,
 				868E028F29162D4C0039B52E /* Products */,
 			);
@@ -95,12 +98,20 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		868E02AD291649C90039B52E /* NewGroup */ = {
+		868E02AD291649C90039B52E /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				868E02AE291649F40039B52E /* RandomUser+Response.swift */,
 			);
-			path = NewGroup;
+			path = Data;
+			sourceTree = "<group>";
+		};
+		868E02B5291689170039B52E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				868E02B62916892C0039B52E /* RandomUserRouter.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				868E02A9291640850039B52E /* RandomUserView.swift in Sources */,
 				868E02B12916597B0039B52E /* RandomUserViewModel.swift in Sources */,
 				868E029229162D4C0039B52E /* AlamofirePractirceApp.swift in Sources */,
+				868E02B72916892C0039B52E /* RandomUserRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

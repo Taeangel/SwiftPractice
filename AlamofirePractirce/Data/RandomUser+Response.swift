@@ -7,16 +7,6 @@
 
 import Foundation
 
-struct RandomUserRespons: Codable, CustomStringConvertible {
-  var results: [RandomUser]
-  var info: Info
-  
-  var description: String {
-    return "result.count: \(results.count) / info: \(info.seed)" 
-  }
-
-}
-
 struct RandomUser: Codable, Identifiable, CustomStringConvertible {
   var id = UUID()
   var name: Name
@@ -38,6 +28,22 @@ struct RandomUser: Codable, Identifiable, CustomStringConvertible {
   
   var description: String {
     return name.description
+  }
+}
+
+//렌덤 유저끼리 비교를 위한 equatable 프로토콜
+extension RandomUser: Equatable {
+  static func == (lhs: RandomUser, rhs: RandomUser) -> Bool {
+    return lhs.id == rhs.id
+  }
+}
+
+struct RandomUserRespons: Codable, CustomStringConvertible {
+  var results: [RandomUser]
+  var info: Info
+  
+  var description: String {
+    return "result.count: \(results.count) / info: \(info.seed)" 
   }
 }
 
@@ -67,7 +73,7 @@ struct Photo: Codable {
   }
 }
 
-struct Info: Codable {
+struct Info: Codable, CustomStringConvertible {
   var seed: String
   var resultCount: Int
   var page: Int
@@ -79,10 +85,11 @@ struct Info: Codable {
     case page = "page"
     case version = "version"
   }
+  
+  var description: String {
+    return "seed: \(seed)/ version \(version)/ resultsCount: \(resultCount)/ page \(page)"
+  }
 }
-
-
-
 
 //"gender": "male",
 //"name": {

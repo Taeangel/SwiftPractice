@@ -22,9 +22,9 @@ struct ContentView: View {
       RoundedRectangle(cornerRadius: 20)
         .frame(width: 300, height: 500)
         .offset(x: offset.width)
-//        .scaleEffect(getScaleAmount())
-//        .rotationEffect(Angle(degrees: getRotationAmount()))
-        .
+        .scaleEffect(getScaleAmount())
+        .rotationEffect(Angle(degrees: getRotationAmount()))
+        
         .gesture(
           DragGesture()
             .onChanged({ value in

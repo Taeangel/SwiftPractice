@@ -37,12 +37,24 @@ struct ContentView: View {
   let url = URL(string: "https://randomuser.me/api/portraits/women/91.jpg")!
   var body: some View {
     ScrollView {
-      ForEach(vm.randomUsers) { randomUser in
+      ForEach(vm.randomUsers) {  randomUser in
+    
         RandomUserView(randomUser)
+          .onAppear {
+            print("마지막이다")
+            if self.vm.randomUsers.last == randomUser {
+              print("마지막이다!!!")
+            }
+          }
       }
     }
     .introspectScrollView { scrollView in
       configureRefreshControl(scrollView)
+    }
+    
+    if vm.isLpading {
+      ProgressView()
+        .progressViewStyle(CircularProgressViewStyle(tint: Color.gray))
     }
   }
 }
