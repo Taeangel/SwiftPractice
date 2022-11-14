@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		866201EA292255DD00208996 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866201E9292255DD00208996 /* Assets.xcassets */; };
 		866201ED2922658600208996 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866201EC2922658600208996 /* Double.swift */; };
+		866201EF29227CD600208996 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866201EE29227CD600208996 /* HomeViewModel.swift */; };
+		866201F22922ACDB00208996 /* CoinDataServiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866201F12922ACDB00208996 /* CoinDataServiece.swift */; };
 		86FD63D2291BC6FC003785D5 /* SwiftUICryptoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD63D1291BC6FC003785D5 /* SwiftUICryptoAppApp.swift */; };
 		86FD63D4291BC6FC003785D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FD63D3291BC6FC003785D5 /* ContentView.swift */; };
 		86FD63D9291BC6FD003785D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86FD63D8291BC6FD003785D5 /* Preview Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		866201E9292255DD00208996 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		866201EC2922658600208996 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		866201EE29227CD600208996 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		866201F12922ACDB00208996 /* CoinDataServiece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDataServiece.swift; sourceTree = "<group>"; };
 		86FD63CE291BC6FC003785D5 /* SwiftUICryptoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUICryptoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86FD63D1291BC6FC003785D5 /* SwiftUICryptoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUICryptoAppApp.swift; sourceTree = "<group>"; };
 		86FD63D3291BC6FC003785D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		866201F02922ACA800208996 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				866201F12922ACDB00208996 /* CoinDataServiece.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		86FD63C5291BC6FC003785D5 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 				86FD63D3291BC6FC003785D5 /* ContentView.swift */,
 				86FD63F1291BD7EE003785D5 /* Models */,
 				86FD63E1291BC8A8003785D5 /* Extension */,
+				866201F02922ACA800208996 /* Services */,
 				86FD63E5291BCA52003785D5 /* Core */,
 				86FD63E4291BC943003785D5 /* Assets.xcassets */,
 				866201E9292255DD00208996 /* Assets.xcassets */,
@@ -128,6 +141,7 @@
 		86FD63E8291BCA7A003785D5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				866201EE29227CD600208996 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -228,6 +242,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86FD63F5291CD976003785D5 /* CoinRowView.swift in Sources */,
+				866201EF29227CD600208996 /* HomeViewModel.swift in Sources */,
+				866201F22922ACDB00208996 /* CoinDataServiece.swift in Sources */,
 				86FD63D4291BC6FC003785D5 /* ContentView.swift in Sources */,
 				86FD63EA291BCA90003785D5 /* HomeView.swift in Sources */,
 				86FD63D2291BC6FC003785D5 /* SwiftUICryptoAppApp.swift in Sources */,
