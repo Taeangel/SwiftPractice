@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CoinAppApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      NavigationView {
+        HomeView()
+          .toolbar(.hidden)
+      }
     }
+  }
 }
