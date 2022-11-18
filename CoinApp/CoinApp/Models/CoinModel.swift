@@ -18,9 +18,8 @@ struct CoinModel: Identifiable, Codable {
   let currentPrice: Double
   let marketCap, marketCapRank, fullyDilutedValuation, totalVolume: Double?
   let high24H, low24H, priceChange24H, priceChangePercentage24H: Double?
-  let marketCapChange24H: Double?
-  let marketCapChangePercentage24H: Double?
-  let circulatingSupply, totalSupply, maxSupply, ath: Int?
+  let marketCapChange24H, marketCapChangePercentage24H: Double?
+  let circulatingSupply, totalSupply, maxSupply, ath: Double?
   let athChangePercentage: Double?
   let athDate: String?
   let atl, atlChangePercentage: Double?
@@ -28,7 +27,7 @@ struct CoinModel: Identifiable, Codable {
   let lastUpdated: String?
   let sparklineIn7D: SparklineIn7D?
   let priceChangePercentage24HInCurrency: Double?
-  let currentHoldings: Double? // how many coin holding
+  let currentHoldings: Double?
   
   enum CodingKeys: String, CodingKey {
     case id, symbol, name, image
@@ -42,7 +41,7 @@ struct CoinModel: Identifiable, Codable {
     case priceChange24H = "price_change_24h"
     case priceChangePercentage24H = "price_change_percentage_24h"
     case marketCapChange24H = "market_cap_change_24h"
-    case marketCapChangePercentage24H = "market_cap_change_percentage_24h"
+    case marketCapChangePercentage24H =  "market_cap_change_percentage_24h"
     case circulatingSupply = "circulating_supply"
     case totalSupply = "total_supply"
     case maxSupply = "max_supply"
@@ -87,7 +86,7 @@ struct CoinModel: Identifiable, Codable {
                      lastUpdated: lastUpdated,
                      sparklineIn7D: sparklineIn7D,
                      priceChangePercentage24HInCurrency: priceChangePercentage24HInCurrency,
-                     currentHoldings: currentHoldings)
+                     currentHoldings: amount)
   }
   
   var currentHoldingsValue: Double {
@@ -99,11 +98,9 @@ struct CoinModel: Identifiable, Codable {
   }
 }
 
-// MARK:marketCapRank - SparklineIn7D
 struct SparklineIn7D: Codable {
   let price: [Double]?
 }
-
 
 /*
  
