@@ -32,7 +32,7 @@ class CoinImageService {
     } else {
       downloadCoinImage()
       print("downloadImage")
-    } 
+    }
   }
   
   
