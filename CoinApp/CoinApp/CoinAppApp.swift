@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+  @main
 struct CoinAppApp: App {
   
   @StateObject var vm = HomeViewModel()
