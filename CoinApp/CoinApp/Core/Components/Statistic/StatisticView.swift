@@ -1,0 +1,47 @@
+
+//
+//  StatisticViiew.swift
+//  CoinApp
+//
+//  Created by song on 2022/11/22.
+//
+
+import SwiftUI
+
+struct StatisticView: View {
+  
+  let stat: StatisticModel
+  var body: some View {
+    VStack(alignment:.leading, spacing: 4) {
+      
+      Text(stat.title)
+        .font(.caption)
+        .foregroundColor(Color.theme.secondaryText)
+      Text(stat.value)
+        .font(.headline)
+        .foregroundColor(Color.theme.accent)
+      HStack {
+        Image(systemName: "triangle.fill")
+          .font(.caption2)
+          .rotationEffect(
+            Angle(degrees:(stat.percentageChaange ?? 0) >= 0 ? 0 : 180))
+        
+        Text(stat.percentageChaange?.asNumberString() ?? "")
+          .font(.caption)
+          .bold()
+      }
+      .foregroundColor((stat.percentageChaange ?? 0) >= 0 ? Color.theme.green : Color.theme.red)
+      .opacity(stat.percentageChaange == nil ? 0.0  : 1.0)
+    }
+  }
+}
+
+struct StatisticViiew_Previews: PreviewProvider {
+  static var previews: some View {
+    Group {
+      StatisticView(stat: dev.stat1)
+      StatisticView(stat: dev.stat2)
+      StatisticView(stat: dev.stat3)
+    }
+  }
+}
