@@ -25,11 +25,12 @@ class PortfolioDataService {
       self.getPortfolio()
     }
   }
-  
+
   func updatePortfolio(coin: CoinModel, amount: Double) {
     if let entity = saveEntities.first(where: { savedEntity -> Bool in
       return savedEntity.coinID == coin.id
     }) {
+      
       if amount > 0 {
         update(entity: entity, amount: amount)
       } else {
