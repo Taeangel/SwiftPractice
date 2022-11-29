@@ -20,7 +20,8 @@ class CoinDetailDataService {
   }
   
   func getCoinDetail() {
-    guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/\(coin.id)?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false") else { return }
+    print("\(coin.id)")
+    guard let url = URL(string: "https://api.coingecko.com/api/v3/coins/tether?localization=false&tickers=false&market_data=false&community_data=false&developer_data=false&sparkline=false") else { return }
     
     coinSubscription = NetworkingManager.download(url: url)
       .decode(type: CoinDetailModel.self, decoder: JSONDecoder())
