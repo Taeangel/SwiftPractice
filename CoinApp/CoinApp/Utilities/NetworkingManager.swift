@@ -17,8 +17,10 @@ class NetworkingManager {
     var errorDescription: String? {
       switch self {
       case let .badURLResponse(url):
+        print("badURLResponseError \(url)")
         return "badURLResponseError \(url)"
       case .unknown:
+        print("unknownError")
         return "unknownError"
       }
     }
@@ -45,6 +47,7 @@ class NetworkingManager {
     case .finished:
       break
     case .failure(let error):
+      print("\(error)")
       print(error.localizedDescription)
       
     }
