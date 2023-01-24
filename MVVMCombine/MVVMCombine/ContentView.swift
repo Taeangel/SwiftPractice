@@ -32,7 +32,7 @@ class FormViewModel: ObservableObject {
   private var isUsernameVailidPublisher: AnyPublisher<Bool, Never> {
     $username
       .debounce(for: 0.5, scheduler: RunLoop.main)
-      .removeDuplicates()
+//      .removeDuplicates()
       .map { $0.count >= 3 }
       .eraseToAnyPublisher()
   }
@@ -62,7 +62,7 @@ class FormViewModel: ObservableObject {
   
   private var isPasswordValidPublisher: AnyPublisher<PasswordStatus, Never> {
     Publishers.CombineLatest3(isPasswordEmptyPublisher, isPasswordStrongPublisher, arePasswordEqualPublisher)
-      .map {
+        .map {
         if $0 { return PasswordStatus.empty }
         if !$1 { return PasswordStatus.notStrongEnough }
         if !$2 { return PasswordStatus.repeatedPasswordWrong }

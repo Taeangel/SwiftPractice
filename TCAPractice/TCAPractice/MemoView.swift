@@ -9,6 +9,7 @@ import SwiftUI
 import ComposableArchitecture
 // 도메인 + 상태
 // 도메인이란 어떤거를 만들떄 그 데이터 즉 count가 도메인이다.
+
 struct MemoState: Equatable {
   var memos: Memos = []
   var selectedMemo: Memo? = nil
@@ -49,10 +50,12 @@ let memoReducer = Reducer<MemoState, MemoAction, MemoEnvironment> { state, actio
     state.selectedMemo = memo
     state.isLoading = false
     return Effect.none
+    
   case .fetchItemResponse(.failure):
     state.selectedMemo = nil
     state.isLoading = false
     return Effect.none
+    
   case .fetchAll:
     enum FetchAllId {}
     state.isLoading = true
@@ -62,10 +65,12 @@ let memoReducer = Reducer<MemoState, MemoAction, MemoEnvironment> { state, actio
                 for: 0.3,
                 scheduler: environment.mainQueue)
       .catchToEffect(MemoAction.fetchAllResponse)
+    
   case .fetchAllResponse(.success(let memos)):
     state.memos = memos
     state.isLoading = false
     return Effect.none
+    
   case .fetchAllResponse(.failure):
     state.memos = []
     state.isLoading = false
@@ -99,7 +104,6 @@ struct MemoView: View {
             Text("선택된 메모 정보")
             Text(viewStore.state.selectedMemo?.email ?? "비어있음")
             Text(viewStore.state.selectedMemo?.password ?? "비어있음")
-            
           },
                   content: {
             ForEach(viewStore.state.memos) { aMemo in

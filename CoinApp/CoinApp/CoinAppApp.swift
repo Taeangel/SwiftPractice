@@ -35,8 +35,6 @@ struct CoinAppApp: App {
           }
         }
         .zIndex(2.0)
-        
-        
       }
     }
   }

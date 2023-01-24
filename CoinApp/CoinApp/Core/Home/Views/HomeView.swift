@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
   @EnvironmentObject private var vm: HomeViewModel
-  @State private var showPortfolio: Bool = false // animate right
+  @State private var showPortfolio: Bool = true // animate right
   @State private var showPortfolioView: Bool = false //new sheet
+  @State private var showSettingView: Bool = false
   
   @State private var showDetailView: Bool = false
   @State private var selectedCoin: CoinModel? = nil
@@ -22,12 +23,14 @@ struct HomeView: View {
           PortfolioView()
             .environmentObject(vm)
         }
+        .sheet(isPresented: $showSettingView) {
+          SettingView()
+        }
       
       VStack {
         
         homeHeader
         
-
         SearchBarView(seachText: $vm.searchText)
         
         columnTitles
@@ -70,6 +73,7 @@ struct HomeView_Previews: PreviewProvider {
     .environmentObject(dev.homeVM)
   }
 }
+
 // ViewMethod
 extension HomeView  {
   private func segue(coin: CoinModel) {
@@ -87,6 +91,8 @@ extension HomeView {
          .onTapGesture {
           if showPortfolio {
             showPortfolioView.toggle()
+          } else {
+            showSettingView.toggle()
           }
           
         }
@@ -94,10 +100,12 @@ extension HomeView {
           CircleButtonAnimationView(animate: $showPortfolio)
         )
       Spacer()
+      
       Text(showPortfolio ? "Portfolio" : "Live Prices")
         .font(.headline)
         .fontWeight(.heavy)
         .foregroundColor(Color.theme.accent)
+      
       Spacer()
       CircleButtonView(iconeName: "chevron.right")
         .rotationEffect(Angle(degrees: showPortfolio ? 180 : 0))
@@ -116,7 +124,6 @@ extension HomeView {
       .foregroundColor(Color.theme.accent)
       .fontWeight(.medium)
       .multilineTextAlignment(.center)
-      .padding(50)
   }
   
   private var allCoinsList: some View {
@@ -171,8 +178,7 @@ extension HomeView {
           .onTapGesture {
             withAnimation {
               vm.sortOption = vm.sortOption == .holdings ? .holdingsReversed : .holdings
- 
-            }
+             }
           }
       }
      

@@ -7,8 +7,10 @@
 
 import SwiftUI
 import ComposableArchitecture
+
 // 도메인 + 상태
 // 도메인이란 어떤거를 만들떄 그 데이터 즉 count가 도메인이다.
+
 struct CounterState: Equatable {
   var count = 0
 }
@@ -38,7 +40,6 @@ struct CounterView: View {
   let store: Store<CounterState, CounterAction>
   
   var body: some View {
-    WithViewStore(
     WithViewStore(self.store) { viewStore in
       
       VStack {

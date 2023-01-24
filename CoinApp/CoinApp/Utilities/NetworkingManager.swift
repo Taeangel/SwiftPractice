@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class NetworkingManager {
+struct NetworkingManager {
   
   enum NetworkingError: LocalizedError {
     case badURLResponse(url: URL)
@@ -48,7 +48,6 @@ class NetworkingManager {
     case .failure(let error):
       print("\(error)")
       print(error.localizedDescription)
-      
     }
   }
 }

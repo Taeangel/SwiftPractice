@@ -32,7 +32,5 @@ class CoinImageViewModel: ObservableObject {
         self?.image = returnedImage
       }
       .store(in: &cancellables)
-
   }
-  
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 import ComposableArchitecture
 
-@main
+
 struct TCAPracticeApp: App {
   
   let counterStore = Store(initialState: CounterState(), reducer: counterReducer, environment: CounterEnvironment())

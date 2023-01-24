@@ -25,7 +25,7 @@ class PortfolioDataService {
       self.getPortfolio()
     }
   }
-
+  
   func updatePortfolio(coin: CoinModel, amount: Double) {
     if let entity = saveEntities.first(where: { savedEntity -> Bool in
       return savedEntity.coinID == coin.id
@@ -51,7 +51,7 @@ class PortfolioDataService {
     }
   }
   
-  private func add (coin: CoinModel, amount: Double) {
+  private func add(coin: CoinModel, amount: Double) {
     let entity = PortfolioEntity(context: container.viewContext)
     
     entity.coinID = coin.id

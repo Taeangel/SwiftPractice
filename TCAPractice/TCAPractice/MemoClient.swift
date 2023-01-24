@@ -7,6 +7,7 @@
 
 import Foundation
 import ComposableArchitecture
+import Combine
 //Api 통신
 struct MemoClient {
   
@@ -29,6 +30,7 @@ extension MemoClient {
     }
     .mapError { _ in Failure() }
     .eraseToEffect()
+      
   }, fetchMemos: {
     Effect.task {
       let (data, _) = try await URLSession.shared

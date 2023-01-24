@@ -302,8 +302,8 @@
 				86BFB03B2926C97200969833 /* CoinModel.swift */,
 				86BFB059292D192600969833 /* StatisticModel.swift */,
 				862F066C292E232800127E13 /* MarketDataModel.swift */,
-				8630B1CE292FCECF005CE161 /* PortfolioContainer.xcdatamodeld */,
 				8630B1DA2934CDA7005CE161 /* CoindetailModel.swift */,
+				8630B1CE292FCECF005CE161 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";

@@ -38,8 +38,9 @@ struct ChartView: View {
         .background(chartBackGround)
         .overlay(alignment: .leading) { chartYAxisView.padding(.horizontal, 4) }
       
-      chartDateLabel
+//      chartDateLabel
     }
+    
     .font(.caption)
     .foregroundColor(Color.theme.secondaryText)
     .onAppear {
@@ -96,7 +97,7 @@ extension ChartView {
     VStack {
       Text(maxY.formattedWithAbbreviations())
       Spacer()
-      Text(((maxY + minY) / 2).formattedWithAbbreviations())
+//      Text(((maxY + minY)
       Spacer()
       Text(minY.formattedWithAbbreviations())
     }
@@ -104,7 +105,7 @@ extension ChartView {
   
   private var chartDateLabel: some View {
     HStack {
-      Text(startingDate.asShortDateString())
+//      Text(startingDate.asShortDateString())
       Spacer()
       Text(endingDate.asShortDateString())
     }
