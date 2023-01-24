@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwiftUIFirebasePractice
+//  BulidTest
 //
 //  Created by song on 2023/01/24.
 //

@@ -8,17 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		866C7F0629801179003A72CD /* SwiftUIFirebasePracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C7F0529801179003A72CD /* SwiftUIFirebasePracticeApp.swift */; };
-		866C7F0829801179003A72CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C7F0729801179003A72CD /* ContentView.swift */; };
 		866C7F0A2980117A003A72CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866C7F092980117A003A72CD /* Assets.xcassets */; };
 		866C7F0D2980117A003A72CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866C7F0C2980117A003A72CD /* Preview Assets.xcassets */; };
+		866C7F1C2980121A003A72CD /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C7F1B2980121A003A72CD /* FeedView.swift */; };
+		866C7F1F298012B7003A72CD /* TweetRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C7F1E298012B7003A72CD /* TweetRowView.swift */; };
+		86D610B1298024CB00AE3188 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D610B0298024CB00AE3188 /* MainTabView.swift */; };
+		86D610B8298026A900AE3188 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D610B7298026A900AE3188 /* ExploreView.swift */; };
+		86D610BA298026D300AE3188 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D610B9298026D300AE3188 /* NotificationsView.swift */; };
+		86D610BC298026DE00AE3188 /* MessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D610BB298026DE00AE3188 /* MessagesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		866C7F0229801179003A72CD /* SwiftUIFirebasePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFirebasePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866C7F0529801179003A72CD /* SwiftUIFirebasePracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFirebasePracticeApp.swift; sourceTree = "<group>"; };
-		866C7F0729801179003A72CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		866C7F092980117A003A72CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		866C7F0C2980117A003A72CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		866C7F1B2980121A003A72CD /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		866C7F1E298012B7003A72CD /* TweetRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetRowView.swift; sourceTree = "<group>"; };
+		866C7F2029801A5D003A72CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		86D610B0298024CB00AE3188 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		86D610B7298026A900AE3188 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		86D610B9298026D300AE3188 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		86D610BB298026DE00AE3188 /* MessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +46,10 @@
 		866C7EF929801179003A72CD = {
 			isa = PBXGroup;
 			children = (
+				866C7F16298011D9003A72CD /* Core */,
+				866C7F15298011CE003A72CD /* Service */,
+				866C7F14298011CA003A72CD /* Model */,
+				866C7F13298011C1003A72CD /* Extension */,
 				866C7F0429801179003A72CD /* SwiftUIFirebasePractice */,
 				866C7F0329801179003A72CD /* Products */,
 			);
@@ -51,8 +66,8 @@
 		866C7F0429801179003A72CD /* SwiftUIFirebasePractice */ = {
 			isa = PBXGroup;
 			children = (
+				866C7F2029801A5D003A72CD /* Info.plist */,
 				866C7F0529801179003A72CD /* SwiftUIFirebasePracticeApp.swift */,
-				866C7F0729801179003A72CD /* ContentView.swift */,
 				866C7F092980117A003A72CD /* Assets.xcassets */,
 				866C7F0B2980117A003A72CD /* Preview Content */,
 			);
@@ -65,6 +80,120 @@
 				866C7F0C2980117A003A72CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		866C7F13298011C1003A72CD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		866C7F14298011CA003A72CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		866C7F15298011CE003A72CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		866C7F16298011D9003A72CD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				866C7F17298011E5003A72CD /* Components */,
+				86D610B62980266F00AE3188 /* Profile */,
+				86D610B4298025C400AE3188 /* Explore */,
+				86D610B5298025F800AE3188 /* Messages */,
+				86D610B2298025AC00AE3188 /* Notification */,
+				86D610AF298024B900AE3188 /* MainTab */,
+				866C7F18298011EB003A72CD /* Feed */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		866C7F17298011E5003A72CD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				866C7F1D2980128F003A72CD /* Tweets */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		866C7F18298011EB003A72CD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				866C7F1A298011F8003A72CD /* View */,
+				866C7F19298011F3003A72CD /* ViewMOdels */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		866C7F19298011F3003A72CD /* ViewMOdels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewMOdels;
+			sourceTree = "<group>";
+		};
+		866C7F1A298011F8003A72CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				866C7F1B2980121A003A72CD /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		866C7F1D2980128F003A72CD /* Tweets */ = {
+			isa = PBXGroup;
+			children = (
+				866C7F1E298012B7003A72CD /* TweetRowView.swift */,
+			);
+			path = Tweets;
+			sourceTree = "<group>";
+		};
+		86D610AF298024B900AE3188 /* MainTab */ = {
+			isa = PBXGroup;
+			children = (
+				86D610B0298024CB00AE3188 /* MainTabView.swift */,
+			);
+			path = MainTab;
+			sourceTree = "<group>";
+		};
+		86D610B2298025AC00AE3188 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				86D610B9298026D300AE3188 /* NotificationsView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		86D610B4298025C400AE3188 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				86D610B7298026A900AE3188 /* ExploreView.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		86D610B5298025F800AE3188 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				86D610BB298026DE00AE3188 /* MessagesView.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		86D610B62980266F00AE3188 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866C7F0829801179003A72CD /* ContentView.swift in Sources */,
+				86D610B1298024CB00AE3188 /* MainTabView.swift in Sources */,
+				866C7F1F298012B7003A72CD /* TweetRowView.swift in Sources */,
+				866C7F1C2980121A003A72CD /* FeedView.swift in Sources */,
 				866C7F0629801179003A72CD /* SwiftUIFirebasePracticeApp.swift in Sources */,
+				86D610BC298026DE00AE3188 /* MessagesView.swift in Sources */,
+				86D610B8298026A900AE3188 /* ExploreView.swift in Sources */,
+				86D610BA298026D300AE3188 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,11 +404,12 @@
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUIFirebasePractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +434,12 @@
 				DEVELOPMENT_TEAM = YB5KQCLMY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = SwiftUIFirebasePractice/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
