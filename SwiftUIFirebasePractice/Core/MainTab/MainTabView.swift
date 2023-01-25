@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainTabView_: View {
+struct MainTabView: View {
   @State private var selectedIndex = 0
   
   var body: some View {
@@ -54,6 +54,6 @@ struct MainTabView_: View {
 
 struct MainTabView__Previews: PreviewProvider {
   static var previews: some View {
-    MainTabView_()
+    MainTabView()
   }
 }
