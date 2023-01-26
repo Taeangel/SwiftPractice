@@ -32,7 +32,6 @@ struct AuthenticationHeaderView: View {
   }
 }
 
-
 struct AuthenticationHeaderView_Previews: PreviewProvider {
   static var previews: some View {
     AuthenticationHeaderView(title1: "안녕", title2: "반가워")
