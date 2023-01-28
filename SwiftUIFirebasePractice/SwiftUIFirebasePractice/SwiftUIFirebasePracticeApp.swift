@@ -21,6 +21,7 @@ struct SwiftUIFirebasePracticeApp: App {
     WindowGroup {
       NavigationView {
         ContentView()
+//        ProfilePhotoSelectorView()
       }
       .environmentObject(viewModel)
     }

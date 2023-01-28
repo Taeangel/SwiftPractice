@@ -19,7 +19,10 @@
 		86006AA02982D6AE00808638 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 86006A9F2982D6AE00808638 /* FirebaseFirestore */; };
 		86006AA22982D6AE00808638 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 86006AA12982D6AE00808638 /* FirebaseFirestoreSwift */; };
 		86006AA42982D6AE00808638 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 86006AA32982D6AE00808638 /* FirebaseStorage */; };
-		86006AA62982D9AA00808638 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86006AA52982D9AA00808638 /* AuthViewModel.swift */; };
+		86006AA829834B9500808638 /* ProfilePhotoSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86006AA729834B9500808638 /* ProfilePhotoSelectorView.swift */; };
+		86006AAB29843CAB00808638 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86006AAA29843CAB00808638 /* ImagePicker.swift */; };
+		86006AAD2984996800808638 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86006AAC2984996800808638 /* ImageUploader.swift */; };
+		8665695A2985587000824FCB /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86006AA52982D9AA00808638 /* AuthViewModel.swift */; };
 		866C7F0629801179003A72CD /* SwiftUIFirebasePracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866C7F0529801179003A72CD /* SwiftUIFirebasePracticeApp.swift */; };
 		866C7F0A2980117A003A72CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866C7F092980117A003A72CD /* Assets.xcassets */; };
 		866C7F0D2980117A003A72CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 866C7F0C2980117A003A72CD /* Preview Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		86006A982981BEC900808638 /* AuthenticationHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationHeaderView.swift; sourceTree = "<group>"; };
 		86006A9A2982D57B00808638 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		86006AA52982D9AA00808638 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		86006AA729834B9500808638 /* ProfilePhotoSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePhotoSelectorView.swift; sourceTree = "<group>"; };
+		86006AAA29843CAB00808638 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		86006AAC2984996800808638 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		866C7F0229801179003A72CD /* SwiftUIFirebasePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIFirebasePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		866C7F0529801179003A72CD /* SwiftUIFirebasePracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIFirebasePracticeApp.swift; sourceTree = "<group>"; };
 		866C7F092980117A003A72CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,18 +119,19 @@
 			isa = PBXGroup;
 			children = (
 				86006A8E2981AC0E00808638 /* ViewModels */,
-				86006A8D2981AC0C00808638 /* View */,
+				86006A8D2981AC0C00808638 /* Views */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		86006A8D2981AC0C00808638 /* View */ = {
+		86006A8D2981AC0C00808638 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				86006A8F2981AC2900808638 /* LoginView.swift */,
 				86006A912981AC3700808638 /* RegistrationView.swift */,
+				86006AA729834B9500808638 /* ProfilePhotoSelectorView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		86006A8E2981AC0E00808638 /* ViewModels */ = {
@@ -141,6 +148,14 @@
 				86006A982981BEC900808638 /* AuthenticationHeaderView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		86006AA929843C9B00808638 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				86006AAA29843CAB00808638 /* ImagePicker.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		866C7EF929801179003A72CD = {
@@ -201,6 +216,7 @@
 		866C7F15298011CE003A72CD /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				86006AAC2984996800808638 /* ImageUploader.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -208,6 +224,7 @@
 		866C7F16298011D9003A72CD /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				86006AA929843C9B00808638 /* Utils */,
 				86006A8C2981ABF400808638 /* Authentication */,
 				866C7F17298011E5003A72CD /* Components */,
 				86006A8529819BD400808638 /* UploadTweet */,
@@ -457,12 +474,15 @@
 			files = (
 				86D610C0298029DA00AE3188 /* ProfileView.swift in Sources */,
 				86D610B1298024CB00AE3188 /* MainTabView.swift in Sources */,
+				86006AAB29843CAB00808638 /* ImagePicker.swift in Sources */,
 				866C7F1F298012B7003A72CD /* TweetRowView.swift in Sources */,
 				866C7F1C2980121A003A72CD /* FeedView.swift in Sources */,
+				86006AAD2984996800808638 /* ImageUploader.swift in Sources */,
 				86006A962981B07D00808638 /* CustomInputField.swift in Sources */,
 				86D610D029817D1B00AE3188 /* SideMenuView.swift in Sources */,
 				866C7F0629801179003A72CD /* SwiftUIFirebasePracticeApp.swift in Sources */,
 				86006A992981BEC900808638 /* AuthenticationHeaderView.swift in Sources */,
+				86006AA829834B9500808638 /* ProfilePhotoSelectorView.swift in Sources */,
 				86D610D629817EED00AE3188 /* UserStatsView.swift in Sources */,
 				86D610BC298026DE00AE3188 /* MessagesView.swift in Sources */,
 				86D610D429817D3D00AE3188 /* SideMenuViewModel.swift in Sources */,
@@ -472,11 +492,11 @@
 				86006A902981AC2900808638 /* LoginView.swift in Sources */,
 				86006A922981AC3700808638 /* RegistrationView.swift in Sources */,
 				86006A8929819BFC00808638 /* NewTweetView.swift in Sources */,
-				86006AA62982D9AA00808638 /* AuthViewModel.swift in Sources */,
 				86006A942981AD5200808638 /* RoundedShape.swift in Sources */,
 				86D610DA2981963D00AE3188 /* SideMenuOptionRowView.swift in Sources */,
 				86D610C62980F58F00AE3188 /* TweetFilterViewModel.swift in Sources */,
 				86D610B8298026A900AE3188 /* ExploreView.swift in Sources */,
+				8665695A2985587000824FCB /* AuthViewModel.swift in Sources */,
 				86D610BA298026D300AE3188 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
