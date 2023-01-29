@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
   @State private var selectionFilter: TweetFilterViewModel = .tweets
   @Namespace var animation
   @Environment(\.presentationMode) var mode
+  private var user: TwitterUser
+  
+  init(user: TwitterUser) {
+    self.user = user
+  }
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -27,19 +33,20 @@ struct ProfileView: View {
       
       Spacer()
     }
+    .navigationBarHidden(true)
   }
+    
 }
 
 struct ProfileView_Previews: PreviewProvider {
   static var previews: some View {
-    ProfileView()
+    ProfileView(user: TwitterUser(username: NSUUID().uuidString, fullname: "batman", profileImageUrl: "Bruce", email: "wngks2050@naver.com"))
   }
 }
 
-
 extension ProfileView {
   private var hearderView: some View {
-
+    
     ZStack(alignment: .bottomLeading) {
       
       Color(.systemBlue)
@@ -48,18 +55,21 @@ extension ProfileView {
         Button(
           action: {
             self.mode.wrappedValue.dismiss()
-        },
+          },
           label: {
-          Image(systemName: "arrow.left")
-            .resizable()
-            .frame(width: 20, height: 16)
-            .foregroundColor(.white)
-            .offset(x: 16, y: 12)
-        })
-      
-      Circle()
-        .frame(width: 72, height: 72)
-        .offset(x: 16, y: 24)
+            Image(systemName: "arrow.left")
+              .resizable()
+              .frame(width: 20, height: 16)
+              .foregroundColor(.white)
+              .offset(x: 16, y: -4)
+          })
+        
+        KFImage(URL(string: user.profileImageUrl))
+          .resizable()
+          .scaledToFill()
+          .clipShape(Circle())
+          .frame(width: 72, height: 72)
+          .offset(x: 16, y: 24)
       }
     }
     .frame(height: 88)
@@ -76,16 +86,16 @@ extension ProfileView {
       
       Button(
         action: {
-  
-      },
+          
+        },
         label: {
-        Text("Edit Profile")
+          Text("Edit Profile")
             .font(.subheadline)
             .bold()
             .frame(width: 120, height: 32)
             .foregroundColor(.black)
             .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0.75))
-      })
+        })
     }
     .padding(.trailing)
   }
@@ -93,7 +103,7 @@ extension ProfileView {
   private var userInfoDetails: some View {
     VStack(alignment: .leading, spacing: 4) {
       HStack {
-        Text("Heath Ledger")
+        Text(user.fullname)
           .font(.title2)
           .bold()
         
@@ -101,7 +111,7 @@ extension ProfileView {
           .foregroundColor(Color(.systemBlue))
       }
       
-      Text("@joker")
+      Text("@\(user.username)")
         .font(.subheadline)
         .foregroundColor(.gray)
       
@@ -163,8 +173,8 @@ extension ProfileView {
     ScrollView {
       LazyVStack {
         ForEach(0...9, id: \.self) { _ in
-          TweetRowView()
-            .padding()
+//          TweetRowView()
+//            .padding()
         }
       }
     }
