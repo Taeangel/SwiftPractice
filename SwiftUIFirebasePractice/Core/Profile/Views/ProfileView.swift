@@ -38,11 +38,11 @@ struct ProfileView: View {
     
 }
 
-struct ProfileView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProfileView(user: TwitterUser(username: NSUUID().uuidString, fullname: "batman", profileImageUrl: "Bruce", email: "wngks2050@naver.com"))
-  }
-}
+//struct ProfileView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ProfileView(user: TwitterUser(username: NSUUID().uuidString, fullname: "batman", profileImageUrl: "Bruce", email: "wngks2050@naver.com"))
+//  }
+//}
 
 extension ProfileView {
   private var hearderView: some View {

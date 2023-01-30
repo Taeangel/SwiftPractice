@@ -26,21 +26,15 @@ struct TweetRowView: View {
   }
 }
 
-//struct TweetRowView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    TweetRowView(tweet: Tweet(caption: "", timestap: "", uid: "", likes: 0))
-//  }
-//}
-
 extension TweetRowView {
   
   var profileInfoView: some View {
     VStack(alignment: .leading , spacing: 4) {
       HStack {
-        Text("Bruce Wayne")
+        Text(tweet.user?.fullname ?? "")
           .font(.subheadline)
           .bold()
-        Text("@batman")
+        Text("@\(tweet.user?.username ?? "")")
           .foregroundColor(.gray)
           .font(.callout)
         Text("2w")
@@ -54,9 +48,11 @@ extension TweetRowView {
   }
   
   var imageProfileView: some View {
-    Circle()
+    KFImage(URL(string: tweet.user?.profileImageUrl ?? ""))
+      .resizable()
+      .scaledToFill()
+      .clipShape(Circle())
       .frame(width: 56, height: 56)
-      .foregroundColor(Color(.systemBlue))
   }
   
   var funcTabViews: some View {

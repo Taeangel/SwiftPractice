@@ -11,20 +11,20 @@ import FirebaseFirestoreSwift
 struct UserService {
   let db = Firestore.firestore()
   
-  func fetchUser(withUid uid: String, completion: @escaping([String : Any]) -> ()) {
+  func fetchUser(withUid uid: String, completion: @escaping(TwitterUser) -> ()) {
     db.collection("users")
       .document(uid)
       .getDocument { snapshot , _ in
-        guard let snapshotData = snapshot?.data() else {
+        guard let snapshot = snapshot else { return }
+        
+        guard let user = try? snapshot.data(as: TwitterUser.self) else {
           return
         }
-        
-        completion(snapshotData)
+        completion(user)
       }
   }
   
   func fetchUsers(completion: @escaping([TwitterUser]) -> ()) {
-    var users: [TwitterUser] = []
     db.collection("users")
       .getDocuments { snapshot, _ in
         guard let documents = snapshot?.documents else { return }

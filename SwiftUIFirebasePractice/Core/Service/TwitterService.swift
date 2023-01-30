@@ -32,14 +32,14 @@ struct TweetService {
   }
   
   func fetchTweets(completion: @escaping([Tweet]) -> ()) {
+
     db.collection("tweets").getDocuments { snapshot, _ in
       guard let documents = snapshot?.documents else { return }
-      print(documents.count)
+ 
       let tweets = documents.compactMap { try? $0.data(as: Tweet.self) }
-      print(tweets.count)
-      print(tweets.count)
       completion(tweets)
-    }
+      }
+     
   }
   
 }

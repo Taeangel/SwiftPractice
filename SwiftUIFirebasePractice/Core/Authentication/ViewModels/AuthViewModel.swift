@@ -80,16 +80,8 @@ class AuthViewModel: ObservableObject {
   func fetchUser() {
     guard let uid = self.userSession?.uid else {
       return
-      
     }
-    
-    service.fetchUser(withUid: uid) { snapshotData in
-      
-      let user = TwitterUser(username: snapshotData["username"] as? String ?? "",
-                  fullname: snapshotData["fullname"] as? String ?? "",
-                  profileImageUrl: snapshotData["profileImageUrl"] as? String ?? "",
-                  email: snapshotData["email"] as? String ?? "")
-      
+    service.fetchUser(withUid: uid) { user in
       self.currentUser = user
     }
   }
