@@ -19,11 +19,11 @@ struct ProfileView: View {
   }
   
   var body: some View {
-    VStack(alignment: .leading) {
+    VStack(alignment: .leading, spacing: 30) {
       
       hearderView
       
-      actionButtons
+//      actionButtons
       
       userInfoDetails
       
@@ -115,28 +115,6 @@ extension ProfileView {
         .font(.subheadline)
         .foregroundColor(.gray)
       
-      Text("Your moms favorite viliain")
-        .font(.subheadline)
-        .padding(.vertical)
-      
-      
-      HStack(spacing: 24) {
-        HStack {
-          Image(systemName: "mappin.and.ellipse")
-          
-          Text("gatham, NY")
-        }
-        
-        HStack {
-          Image(systemName: "link")
-          
-          Text("www.thejoker.com")
-        }
-      }
-      .font(.caption)
-      .foregroundColor(.gray)
-      
-      UserStatsView()
     }
     .padding(.horizontal)
   }

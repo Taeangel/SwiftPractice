@@ -16,19 +16,35 @@ struct AuthenticationHeaderView: View {
       HStack {
         Spacer()
       }
-      Text(title1)
-        .font(.largeTitle)
-        .fontWeight(.semibold)
+      HStack(spacing: 30) {
+        VStack {
+          
+          Text(title1)
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+          
+          Text(title2)
+            .font(.callout)
+            .fontWeight(.semibold)
+        }
+        .padding(.leading)
+        
+        Spacer()
+        
+        Image("tweet")
+          .resizable()
+          .frame(width: 70, height: 70, alignment: .leading)
+          .foregroundColor(.white)
+      }
+      .padding(20)
       
-      Text(title2)
-        .font(.largeTitle)
-        .fontWeight(.semibold)
     }
-    .frame(height: 260)
-    .padding(.leading)
+    .frame(height: 200)
     .background(Color(.systemBlue))
     .foregroundColor(.white)
     .clipShape(RoundedShape(corners: [.bottomRight]))
+    
+    
   }
 }
 

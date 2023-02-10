@@ -17,14 +17,17 @@ struct TweetRowView: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      HStack(alignment: .top, spacing: 12) {
-        imageProfileView
+      HStack(alignment: .top, spacing: 50) {
+        HStack(spacing: 12) {
+          imageProfileView
+          
+          profileInfoView
+        }
+       
+        likeButton
         
-        profileInfoView
       }
       .padding(.horizontal)
-      
-      funcTabViews
       
       Divider()
     }
@@ -32,6 +35,17 @@ struct TweetRowView: View {
 }
 
 extension TweetRowView {
+  
+  var likeButton: some View {
+    Button(action: {
+      viewModel.tweet.didLike ?? false ? viewModel.unlikeTweet() : viewModel.likeTweet()
+    },
+           label: {
+      Image(systemName: viewModel.tweet.didLike ?? false ? "heart.fill" : "heart")
+        .font(.headline)
+        .foregroundColor(viewModel.tweet.didLike ?? false  ? .red : .gray)
+    })
+  }
   
   var profileInfoView: some View {
     VStack(alignment: .leading , spacing: 4) {
@@ -42,9 +56,6 @@ extension TweetRowView {
         Text("@\(viewModel.tweet.user?.username ?? "")")
           .foregroundColor(.gray)
           .font(.callout)
-        Text("2w")
-          .foregroundColor(.gray)
-          .font(.caption)
       }
       Text(viewModel.tweet.caption)
         .font(.subheadline)
@@ -58,50 +69,5 @@ extension TweetRowView {
       .scaledToFill()
       .clipShape(Circle())
       .frame(width: 56, height: 56)
-  }
-  
-  var funcTabViews: some View {
-    HStack {
-      Button(action: {
-        
-      },
-             label: {
-        Image(systemName: "bubble.left")
-          .font(.subheadline)
-      })
-      
-      Spacer()
-      
-      Button(action: {
-        
-      },
-             label: {
-        Image(systemName: "arrow.2.squarepath")
-          .font(.subheadline)
-      })
-      
-      Spacer()
-      
-      Button(action: {
-        viewModel.tweet.didLike ?? false ? viewModel.unlikeTweet() : viewModel.likeTweet()
-      },
-             label: {
-        Image(systemName: viewModel.tweet.didLike ?? false ? "heart.fill" : "heart")
-          .font(.subheadline)
-          .foregroundColor(viewModel.tweet.didLike ?? false  ? .red : .gray)
-      })
-      
-      Spacer()
-      
-      Button(action: {
-        
-      },
-             label: {
-        Image(systemName: "bookmark")
-          .font(.subheadline)
-      })
-    }
-    .padding()
-    .foregroundColor(.gray)
   }
 }

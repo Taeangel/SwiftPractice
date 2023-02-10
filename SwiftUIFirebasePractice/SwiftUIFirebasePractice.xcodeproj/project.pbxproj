@@ -199,8 +199,6 @@
 			isa = PBXGroup;
 			children = (
 				866C7F16298011D9003A72CD /* Core */,
-				866C7F14298011CA003A72CD /* Model */,
-				866C7F13298011C1003A72CD /* Extension */,
 				866C7F0429801179003A72CD /* SwiftUIFirebasePractice */,
 				866C7F0329801179003A72CD /* Products */,
 				0A923A6CF02414E020C7344F /* Pods */,
@@ -236,20 +234,6 @@
 				866C7F0C2980117A003A72CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		866C7F13298011C1003A72CD /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		866C7F14298011CA003A72CD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		866C7F15298011CE003A72CD /* Service */ = {

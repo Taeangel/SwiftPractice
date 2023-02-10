@@ -29,7 +29,7 @@ struct SideMenuView: View {
             .font(.caption)
             .foregroundColor(.gray)
           
-          UserStatsView()
+//          UserStatsView()
           
           }
         .padding(.leading)
