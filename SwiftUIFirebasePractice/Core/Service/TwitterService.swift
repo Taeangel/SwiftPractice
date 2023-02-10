@@ -7,11 +7,13 @@
 
 import Firebase
 import FirebaseFirestoreSwift
+import CombineExt
 import Combine
 
 struct TweetService {
+  let db = Firestore.firestore()
   
-  func uploadTweet(caption: String, completion: @escaping(Bool) -> ()) {
+  private func uploadTweet(caption: String, completion: @escaping(Bool) -> ()) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     
     let data = ["uid": uid,
@@ -31,7 +33,7 @@ struct TweetService {
       }
   }
   
-  func fetchTweets(completion: @escaping([Tweet]) -> ()) {
+  private func fetchTweets(completion: @escaping([Tweet]) -> ()) {
     
     db.collection("tweets")
       .order(by: "timestamp", descending: true)
@@ -43,7 +45,7 @@ struct TweetService {
       }
   }
   
-  func fetchTweets(forUid uid: String, completion: @escaping([Tweet]) -> ()) {
+  private func fetchTweets(forUid uid: String, completion: @escaping([Tweet]) -> ()) {
     db.collection("tweets")
       .whereField("uid", isEqualTo: uid)
       .getDocuments { snapshot, _ in
@@ -56,7 +58,7 @@ struct TweetService {
       }
   }
   
-  func likeTweet(_ tweet: Tweet, compeltion: @escaping() -> ()) {
+  private func likeTweet(_ tweet: Tweet, compeltion: @escaping() -> ()) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     guard let tweetId = tweet.id else { return }
     
@@ -71,7 +73,7 @@ struct TweetService {
       }
   }
   
-  func checkIfUserLikedTweet(_ tweet: Tweet, completion: @escaping (Bool) -> ()) {
+  private func checkIfUserLikedTweet(_ tweet: Tweet, completion: @escaping (Bool) -> ()) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     guard let tweetId = tweet.id else { return }
     Firestore.firestore().collection("users").document(uid).collection("user-likes").document(tweetId).getDocument { snapshot, _ in
@@ -80,7 +82,7 @@ struct TweetService {
     }
   }
   
-  func unlikeTweet(_ tweet: Tweet, completion: @escaping () -> ()) {
+  private func unlikeTweet(_ tweet: Tweet, completion: @escaping () -> ()) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     guard let tweetId = tweet.id else { return }
     guard tweet.likes > 0 else { return }
@@ -92,7 +94,7 @@ struct TweetService {
     }
   }
   
-  func fetchLinkedTweets(forUid uid: String, completion: @escaping([Tweet]) -> ()) {
+  private func fetchLinkedTweets(forUid uid: String, completion: @escaping([Tweet]) -> ()) {
     var tweets: [Tweet] = []
     
     Firestore.firestore().collection("users").document(uid).collection("user-likes").getDocuments { snapshot, _ in
@@ -106,6 +108,62 @@ struct TweetService {
           completion(tweets)
         }
       }
+    }
+  }
+}
+
+
+// MARK: - 레거시 코드인 escaping Service를 combine을 활용하여 AnyPublisher로변경
+extension TweetService {
+  func uploadTweetCombine(caption: String) -> AnyPublisher<Bool, Error> {
+    return AnyPublisher<Bool, Error>.create { subscriber in
+      uploadTweet(caption: caption) { subscriber.send($0) }
+      return AnyCancellable {}
+    }
+  }
+  
+  func fetchTweetsCombine() -> AnyPublisher<[Tweet], Error> {
+    return AnyPublisher<[Tweet], Error>.create { subscriber in
+      fetchTweets { tweets in
+        subscriber.send(tweets)
+      }
+      return AnyCancellable {}
+    }
+  }
+  
+  func fetchTweetsCombine(forUid uid: String) -> AnyPublisher<[Tweet], Error> {
+    return AnyPublisher<[Tweet], Error>.create { subscriber in
+      fetchTweets(forUid: uid) { tweets in
+        subscriber.send(tweets)
+      }
+      return AnyCancellable {}
+    }
+  }
+  
+  func likeTweetCombine(_ tweet: Tweet) -> AnyPublisher<Void, Error> {
+    return AnyPublisher<Void, Error>.create { subscriber in
+      likeTweet(tweet) {
+        subscriber.send(completion: .finished)
+      }
+      return AnyCancellable {}
+    }
+  }
+  
+  func checkIfUserLikedTweetCombine(_ tweet: Tweet) -> AnyPublisher<Bool, Error> {
+    return AnyPublisher<Bool, Error>.create { subscriber in
+      checkIfUserLikedTweet(tweet) { didlike in
+        subscriber.send(didlike)
+      }
+      return AnyCancellable {}
+    }
+  }
+  
+  func unlikeTweetCombine(_ tweet: Tweet) -> AnyPublisher<Void, Error> {
+    return AnyPublisher<Void, Error>.create { subscriber in
+      unlikeTweet(tweet) {
+        subscriber.send(completion: .finished)
+      }
+      return AnyCancellable {}
     }
   }
 }

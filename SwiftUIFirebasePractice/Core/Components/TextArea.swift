@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct TextArea: View {
   @Binding var text: String
   let placeholder: String

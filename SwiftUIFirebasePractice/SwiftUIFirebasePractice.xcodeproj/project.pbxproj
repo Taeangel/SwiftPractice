@@ -256,7 +256,6 @@
 				86006A8C2981ABF400808638 /* Authentication */,
 				86006A8529819BD400808638 /* UploadTweet */,
 				86D610CC29817CF300AE3188 /* SideMenu */,
-				86D610B62980266F00AE3188 /* Profile */,
 				86D610B4298025C400AE3188 /* Explore */,
 				86D610B5298025F800AE3188 /* Messages */,
 				86D610B2298025AC00AE3188 /* Notification */,
@@ -421,6 +420,7 @@
 			children = (
 				86D610CF29817D1B00AE3188 /* SideMenuView.swift */,
 				86D610D92981963D00AE3188 /* SideMenuOptionRowView.swift */,
+				86D610B62980266F00AE3188 /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";

@@ -7,6 +7,8 @@
 
 import Firebase
 import FirebaseFirestoreSwift
+import CombineExt
+import Combine
 
 struct UserService {
   let db = Firestore.firestore()
@@ -33,4 +35,14 @@ struct UserService {
         completion(users)
       }
   }
+}
+
+extension UserService {
+//  func fetchUser(withUid uid: String) -> AnyPublisher<TwitterUser, Error> {
+//    return AnyPublisher<TwitterUser, Error>.create { subscriber in
+//      fetchUser(withUid: uid) { user in
+//
+//      }
+//    }
+//  }
 }

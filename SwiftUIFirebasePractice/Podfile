@@ -12,5 +12,6 @@ target 'SwiftUIFirebasePractice' do
   pod 'Firebase'
   pod 'FirebaseFirestoreSwift'
   pod 'Kingfisher', '~> 7.0'
+  pod 'CombineExt'
 end
 
