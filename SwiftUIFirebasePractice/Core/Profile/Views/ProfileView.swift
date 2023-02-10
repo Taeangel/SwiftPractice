@@ -111,7 +111,11 @@ extension ProfileView {
           .foregroundColor(Color(.systemBlue))
       }
       
-      Text("@\(viewModel.user.username)")
+      Text("\(viewModel.user.username)님")
+        .font(.subheadline)
+        .foregroundColor(.gray)
+      
+      Text("@\(viewModel.user.email)")
         .font(.subheadline)
         .foregroundColor(.gray)
       

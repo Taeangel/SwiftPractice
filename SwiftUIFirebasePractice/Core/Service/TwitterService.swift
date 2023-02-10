@@ -7,9 +7,10 @@
 
 import Firebase
 import FirebaseFirestoreSwift
+import Combine
 
 struct TweetService {
-  let db = Firestore.firestore()
+  
   func uploadTweet(caption: String, completion: @escaping(Bool) -> ()) {
     guard let uid = Auth.auth().currentUser?.uid else { return }
     
@@ -26,7 +27,6 @@ struct TweetService {
           completion(false)
           return
         }
-        
         completion(true)
       }
   }

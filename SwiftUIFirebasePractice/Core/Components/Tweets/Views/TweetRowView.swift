@@ -17,13 +17,15 @@ struct TweetRowView: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      HStack(alignment: .top, spacing: 50) {
+      HStack(alignment: .top) {
         HStack(spacing: 12) {
           imageProfileView
           
           profileInfoView
         }
        
+        Spacer(minLength: 20)
+        
         likeButton
         
       }

@@ -14,7 +14,7 @@ final class RxSwiftPracticeUITestsLaunchTests: XCTestCase {
     }
 
     override func setUpWithError() throws {
-        continueAfterFailure = false
+        continueAfterFailure = false 
     }
 
     func testLaunch() throws {

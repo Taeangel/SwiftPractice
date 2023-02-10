@@ -25,7 +25,12 @@ struct SideMenuView: View {
           Text(user.fullname)
             .font(.headline)
           
-          Text("@\(user.username)")
+          Text("\(user.username)님")
+            .font(.caption)
+            .foregroundColor(.gray)
+          
+          
+          Text("@\(user.email)")
             .font(.caption)
             .foregroundColor(.gray)
           
