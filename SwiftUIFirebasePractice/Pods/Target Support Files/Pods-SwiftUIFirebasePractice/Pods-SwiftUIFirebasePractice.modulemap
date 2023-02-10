@@ -1,0 +1,6 @@
+framework module Pods_SwiftUIFirebasePractice {
+  umbrella header "Pods-SwiftUIFirebasePractice-umbrella.h"
+
+  export *
+  module * { export * }
+}
