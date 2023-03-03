@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,14 +24,15 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="자는강아지" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-4x-SbX">
-                    <rect key="frame" x="0.0" y="118" width="390" height="852"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="자는강아지" translatesAutoresizingMaskIntoConstraints="NO" id="ts8-4x-SbX">
+                    <rect key="frame" x="0.0" y="-42" width="390" height="852"/>
                 </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="ts8-4x-SbX" secondAttribute="trailing" id="0pN-UM-5zs"/>
+                <constraint firstItem="ts8-4x-SbX" firstAttribute="top" secondItem="NDe-OV-85B" secondAttribute="top" id="4PU-Kz-A2L"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NDe-OV-85B" secondAttribute="trailing" id="8us-YB-GRA"/>
                 <constraint firstItem="ts8-4x-SbX" firstAttribute="top" secondItem="NDe-OV-85B" secondAttribute="bottom" constant="25" id="Mcv-qm-nbv"/>
                 <constraint firstItem="NDe-OV-85B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="PlC-X4-tj1"/>

@@ -112,7 +112,6 @@ struct TweetService {
   }
 }
 
-
 // MARK: - 레거시 코드인 escaping Service를 combine을 활용하여 AnyPublisher로변경
 extension TweetService {
   func uploadTweetCombine(caption: String) -> AnyPublisher<Bool, Error> {
@@ -130,6 +129,7 @@ extension TweetService {
       return AnyCancellable {}
     }
   }
+  
   
   func fetchTweetsCombine(forUid uid: String) -> AnyPublisher<[Tweet], Error> {
     return AnyPublisher<[Tweet], Error>.create { subscriber in

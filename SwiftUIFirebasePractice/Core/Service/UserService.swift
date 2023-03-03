@@ -38,11 +38,12 @@ struct UserService {
 }
 
 extension UserService {
-//  func fetchUser(withUid uid: String) -> AnyPublisher<TwitterUser, Error> {
-//    return AnyPublisher<TwitterUser, Error>.create { subscriber in
-//      fetchUser(withUid: uid) { user in
-//
-//      }
-//    }
-//  }
+  func fetchUserCombine(withUid uid: String) -> AnyPublisher<TwitterUser, Error> {
+    return AnyPublisher<TwitterUser, Error>.create { subscriber in
+      fetchUser(withUid: uid) { user in
+        subscriber.send(user)
+      }
+      return AnyCancellable {}
+    }
+  }
 }

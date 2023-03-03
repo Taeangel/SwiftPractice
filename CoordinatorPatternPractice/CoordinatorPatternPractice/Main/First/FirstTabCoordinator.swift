@@ -13,7 +13,7 @@ class FirstTabCoordinator: Coordinator {
   
   lazy var firstViewController: FirstViewController = {
     let vc = FirstViewController()
-    vc.title = "first"
+    vc.title = "fiasdasdrst"
     return vc
   }()
   

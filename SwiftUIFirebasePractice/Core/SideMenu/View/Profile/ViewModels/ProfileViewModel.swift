@@ -73,14 +73,14 @@ class ProfileViewModel: ObservableObject {
     
     service.fetchTweetsCombine(forUid: uid)
       .sink(receiveCompletion: { _ in },
-            receiveValue: { tweets in
-        self.likedTweets = tweets
+            receiveValue: { [weak self] tweets in
+        self?.likedTweets = tweets
         for i in 0 ..< tweets.count {
           let uid = tweets[i].uid
-          self.userService.fetchUser(withUid: uid) { user in
-            self.likedTweets[i].user = user
-          }
-
+          self?.userService.fetchUserCombine(withUid: uid)
+            .sink(receiveCompletion: { _ in }) { [weak self]user in
+              self?.likedTweets[i].user = user
+            }
         }
       })
       .store(in: &cancellables)

@@ -54,8 +54,7 @@ class TweetRowViewModel: ObservableObject {
     service.unlikeTweetCombine(tweet)
       .sink(receiveCompletion: { _ in
         self.tweet.didLike = false
-      }, receiveValue: { _ in
-      })
+      }, receiveValue: { _ in })
       .store(in: &cancellables)
   }
 }

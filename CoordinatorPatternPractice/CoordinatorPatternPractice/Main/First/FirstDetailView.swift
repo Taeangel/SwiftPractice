@@ -10,7 +10,7 @@ import SwiftUI
 struct FirstDetailView: View {
     var body: some View {
         Text("Hello, Worlasdfkljsadlkfjsadjfklasdjfklasjdklfjasdlkfjaskldjkfljadskfjaklslk!")
-    }
+    } 
 }
 
 struct FirstDetailView_Previews: PreviewProvider {

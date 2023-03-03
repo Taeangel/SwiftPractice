@@ -10,16 +10,16 @@ import Foundation
 protocol ViewModelDelegate: AnyObject {
   func buttonAction(color: ViewModel.ButtonTypeColor)
   func updateModel(model: ResponseModel)
-  func updataError(error: Error)
+  func updata Error(error: Error)
 }
 
 class ViewModel {
   weak var delegate: ViewModelDelegate?
+  
   private let service: MVVMService
   init(service: MVVMService = DefaultService()) {
     self.service = service
   }
-  
   
   func action(action: ViewAction) {
     switch action {

@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
   
   private let viewModel: ViewModel = ViewModel()
+  
   private var model: ResponseModel? {
     didSet {
       DispatchQueue.main.async {
@@ -54,6 +55,7 @@ class ViewController: UIViewController {
     colorChangeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
     colorChangeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
     colorChangeButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+    
     colorChangeButton.tag = 100
     
     view.addSubview(fetchButton)
@@ -61,6 +63,7 @@ class ViewController: UIViewController {
     fetchButton.topAnchor.constraint(equalTo: colorChangeButton.topAnchor).isActive = true
     fetchButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
     fetchButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+    
     fetchButton.tag = 300
     
     view.addSubview(tableView)
