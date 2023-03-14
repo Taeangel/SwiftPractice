@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		865E346029BFE17600E9105E /* SCCodingTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E345F29BFE17600E9105E /* SCCodingTest.swift */; };
+		865E346229BFE1D500E9105E /* SCCodingTest2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E346129BFE1D500E9105E /* SCCodingTest2.swift */; };
 		86B2EE7229B2987300E210F0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2EE7129B2987300E210F0 /* main.swift */; };
 		86B2EE7A29B2B6AD00E210F0 /* 순열과 조합.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2EE7929B2B6AD00E210F0 /* 순열과 조합.swift */; };
 		86B2EE7C29B2C4A500E210F0 /* 같은문자수대로쪼개기.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86B2EE7B29B2C4A500E210F0 /* 같은문자수대로쪼개기.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		865E345F29BFE17600E9105E /* SCCodingTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCodingTest.swift; sourceTree = "<group>"; };
+		865E346129BFE1D500E9105E /* SCCodingTest2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCCodingTest2.swift; sourceTree = "<group>"; };
 		86B2EE6E29B2987300E210F0 /* codingTestPractice */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = codingTestPractice; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B2EE7129B2987300E210F0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		86B2EE7929B2B6AD00E210F0 /* 순열과 조합.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "순열과 조합.swift"; sourceTree = "<group>"; };
@@ -71,6 +75,8 @@
 			children = (
 				86B2EE7129B2987300E210F0 /* main.swift */,
 				86B2EE7F29B2E9CC00E210F0 /* 뿌요뿌요.swift */,
+				865E345F29BFE17600E9105E /* SCCodingTest.swift */,
+				865E346129BFE1D500E9105E /* SCCodingTest2.swift */,
 				86B2EE8129B3F9F600E210F0 /* 순환수열.swift */,
 				86B2EE7929B2B6AD00E210F0 /* 순열과 조합.swift */,
 				86B2EE7B29B2C4A500E210F0 /* 같은문자수대로쪼개기.swift */,
@@ -145,6 +151,8 @@
 				86B2EE7E29B2D0CC00E210F0 /* LinkedList.swift in Sources */,
 				86B2EE8429B6936A00E210F0 /* 번갈아가며 플마.swift in Sources */,
 				86B2EE7229B2987300E210F0 /* main.swift in Sources */,
+				865E346229BFE1D500E9105E /* SCCodingTest2.swift in Sources */,
+				865E346029BFE17600E9105E /* SCCodingTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
