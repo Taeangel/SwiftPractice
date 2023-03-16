@@ -7,92 +7,41 @@
 
 import Foundation
 
+let play_list: [Int] = [2, 3, 1, 4]
+let listen_time = 3
 
-let regularExpression = "asdfeq123_@hackerrank.com"
-
-
-func  isCorrect(regularExpression: String) -> Bool {
-  var result: Bool = true
-  var regularExpressionArr: [String] = []
-  var smallLetter: String = ""
-  var number: String = ""
+func solution(_ play_list:[Int], _ listen_time:Int) -> Int {
+  var resultArr: [Int] = []
+  let play_list = play_list
+ 
+  var listenTimeDouble = play_list + play_list
   
-  regularExpressionArr = regularExpression.components(separatedBy: ["_", "@"])
-
-  if regularExpressionArr.count == 3 {
+  for _ in play_list {
+    var result = 0
+    var listenTime = listen_time
+    for music in listenTimeDouble {
+      if listenTime == listen_time {
+        result += 1
+        listenTime -= 1
+      } else if listenTime > music {
+        result += 1
+        listenTime -= music
+      } else  {
+        result += 1
+        break
+      }
+    }
+ 
+    listenTimeDouble.reverse()
+    listenTimeDouble.removeLast()
+    listenTimeDouble.reverse()
     
-    smallLetter = regularExpressionArr[0]
-    number = regularExpressionArr[1]
-  } else if regularExpressionArr.count == 2 {
-
-    smallLetter = regularExpressionArr[0]
-    number = smallLetter.filter { $0.isNumber }
-    for _ in 0...number.count  {
-      smallLetter.removeLast()
+    if result > play_list.count {
+      result = play_list.count
     }
     
-  } else {
-    return false
+    resultArr.append(result)
   }
-  
-  let email = regularExpressionArr.last!
-  
-  let sda = smallLetter.filter { $0.isNumber }
-  
-  if sda.count != 0 {
-    result = false
-  }
-  
-  if smallLetter.lowercased() != smallLetter {
-    result = false
-  }
-  
-  if smallLetter.count > 6 {
-    result = false
-  }
-  
-  if number.count > 4 {
-    result = false
-  }
-  
-  if email != "hackerrank.com"  {
-    result = false
-  }
-  
-  
-  return result
+  return resultArr.max() ?? 0
 }
-
-print(isCorrect(regularExpression: regularExpression))
-
-//let keymap: [String] = ["ABACD", "BCEFD"]
-//
-//let targets: [String] = ["ABCD", "AABB"]
-//
-//
-//
-//func solution(_ keymap:[String], _ targets:[String]) -> [Int] {
-//  var keymap = keymap.map{$0.map{String($0)}}
-//  var result = [Int]()
-//  var sum = 0
-//
-//  for target in targets {
-//    print(target.map { String($0) })
-//    sum = 0
-//    for t in target.map { String($0) } {
-//
-//      var minValue = Int.max
-//      for k in keymap{
-//        if let i = k.firstIndex(of: t) {
-//          minValue = i+1
-//        }
-//      }
-//      sum = minValue == Int.max ? 0 : sum+minValue
-//    }
-//    result.append(sum == 0 ? -1 : sum)
-//  }
-//
-//  return result
-//}
-////[9, 4]
-//print(solution(keymap, targets))
+print(solution(play_list, listen_time))
